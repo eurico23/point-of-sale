@@ -1,42 +1,10 @@
 import React, {useState} from "react";
-import { View, TextInput, StyleSheet, Dimensions } from 'react-native';
+import { View, TextInput, StyleSheet, Image, ScrollView } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {Text, Box} from '../styles/theme';
-import { ScrollView } from "react-native-gesture-handler";
+import Categories from '../components/Categories';
+import { ProductsDummy } from "../components/ProductsDummy";
 
-
-const category = [
-  {
-    productname: 'Coke Cola',
-    table: 'ALL',
-    price: 150.00,
-  },
-  {
-    productname: 'Coke Cola',
-    table: 'MOST SOLD',
-    price: 200.00,
-  },
-  {
-    productname: 'Coke Cola',
-    table: 'FOOD',
-    price: 50.00,
-  },
-  {
-    productname: 'Coke Cola',
-    table: 'HYGIENE',
-    price: 60.00,
-  },
-  {
-    productname: 'Coke Cola',
-    table: 'DRINK',
-    price: 250.00,
-  },
-  {
-    productname: 'Coke Cola',
-    table: 'XXXX',
-    price: 300.00,
-  },
-];
 
 
 const NewSales =() => {
@@ -51,26 +19,21 @@ const [searchProduct, setSearchProduct] = useState('');
           onChangeText={setSearchProduct}
           ></TextInput>
       </View>
+      
       <View>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          {category.map((item,index) =>(
-            <View style={styles.scrollCategory}>
-              <Text color="blue" fontWeight="bold" fontSize={14} key={index}> {item.table}</Text>
-            </View>
-          ))}
-        </ScrollView>
-      </View>
-      <View>
-        {category.map((item,index) =>(
-            <View style={styles.scrollCategory}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+      <Categories />
+        {ProductsDummy.map((item,index) =>(
+            <View  key={index} style={styles.scrollCategory}>
               <View>
-                <Text color="blue" fontWeight="bold" fontSize={14} key={index}>IMAGE</Text>
-                <Text color="blue" fontWeight="bold" fontSize={14} key={index}> {item.price}</Text>
+                <Image source={item.image} />
+                <Text color="blue" fontWeight="bold" fontSize={14}> {item.price}</Text>
               </View>
-              <Text color="blue" fontWeight="bold" fontSize={14} key={index}> {item.productname}</Text>
-              <Text color="blue" fontWeight="bold" fontSize={14} key={index}>Total price</Text>
+              <Text color="blue" fontWeight="bold" fontSize={14}> {item.productname}</Text>
+              <Text color="blue" fontWeight="bold" fontSize={14} >Total price</Text>
             </View>
           ))}
+          </ScrollView>
       </View>
       
       
