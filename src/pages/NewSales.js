@@ -4,6 +4,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {Text, Box} from '../styles/theme';
 import Categories from '../components/Categories';
 import { ProductsDummy } from "../components/ProductsDummy";
+import { FlatList } from "react-native-gesture-handler";
 
 
 
@@ -21,19 +22,27 @@ const [searchProduct, setSearchProduct] = useState('');
       </View>
       
       <View>
-      <ScrollView showsVerticalScrollIndicator={false}>
       <Categories />
-        {ProductsDummy.map((item,index) =>(
-            <View  key={index} style={styles.scrollCategory}>
+
+    <FlatList 
+    vertical
+      data={ProductsDummy}
+      renderItem={({item})=>{
+        return (
+          <View style={styles.scrollCategory}>
               <View>
-                <Image source={item.image} />
+                <Image source={item.image}  />
                 <Text color="blue" fontWeight="bold" fontSize={14}> {item.price}</Text>
               </View>
               <Text color="blue" fontWeight="bold" fontSize={14}> {item.productname}</Text>
               <Text color="blue" fontWeight="bold" fontSize={14} >Total price</Text>
             </View>
-          ))}
-          </ScrollView>
+        );
+      }
+    }
+    />
+
+     
       </View>
       
       
