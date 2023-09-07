@@ -2,7 +2,7 @@ export const ProductsDummy = [
     {
       id: '1',
       image: require('../assets/images/med1.png'),
-      productname: 'Coke Cola',
+      productname: 'Hansaplast Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml',
       price: 150.00,
     },
     {
@@ -31,6 +31,78 @@ export const ProductsDummy = [
     },
     {
       id: '6',
+      image: require('../assets/images/med3.png'),
+      productname: 'Coke Cola',
+      price: 300.00,
+    },
+    {
+      id: '7',
+      image: require('../assets/images/med1.png'),
+      productname: 'Hansaplast Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml',
+      price: 150.00,
+    },
+    {
+      id: '8',
+      image: require('../assets/images/med2.png'),
+      productname: 'Coke Cola',
+      price: 200.00,
+    },
+    {
+      id: '9',
+      image: require('../assets/images/med3.png'),
+      productname: 'Coke Cola',
+      price: 50.00,
+    },
+    {
+      id: '10',
+      image: require('../assets/images/med1.png'),
+      productname: 'Coke Cola',
+      price: 60.00,
+    },
+    {
+      id: '11',
+      image: require('../assets/images/med2.png'),
+      productname: 'Coke Cola',
+      price: 250.00,
+    },
+    {
+      id: '12',
+      image: require('../assets/images/med3.png'),
+      productname: 'Coke Cola',
+      price: 300.00,
+    },
+    {
+      id: '13',
+      image: require('../assets/images/med1.png'),
+      productname: 'Hansaplast Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml',
+      price: 150.00,
+    },
+    {
+      id: '14',
+      image: require('../assets/images/med2.png'),
+      productname: 'Coke Cola',
+      price: 200.00,
+    },
+    {
+      id: '15',
+      image: require('../assets/images/med3.png'),
+      productname: 'Coke Cola',
+      price: 50.00,
+    },
+    {
+      id: '16',
+      image: require('../assets/images/med1.png'),
+      productname: 'Coke Cola',
+      price: 60.00,
+    },
+    {
+      id: '17',
+      image: require('../assets/images/med2.png'),
+      productname: 'Coke Cola',
+      price: 250.00,
+    },
+    {
+      id: '18',
       image: require('../assets/images/med3.png'),
       productname: 'Coke Cola',
       price: 300.00,

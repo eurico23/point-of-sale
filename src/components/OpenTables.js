@@ -67,7 +67,6 @@ export default function OpenTables({data}) {
             </Box>
           ))}
 
-          <Text style={[styles.buttonText]}>.</Text>
 
           <Box flexDirection="row" gap="m">
             <Button
