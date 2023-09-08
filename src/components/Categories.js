@@ -60,20 +60,10 @@ const Categories =() => {
 export default Categories;
 
 const styles = StyleSheet.create({
-  searchBar: {
-    flexDirection:'row',
-    alignItems:'center',
-    paddingHorizontal:15,
-    backgroundColor:'#F8F9FE',
-    borderRadius:25,
-    borderWidth:1,
-    borderColor:'#D4D6DD',
-    marginBottom:20,
-  },
   scrollCategory:{
     backgroundColor:'#EAF2FF',
     marginRight:10,
-    marginBottom:15,
+    marginBottom:5,
     borderRadius:15,
     paddingVertical:8,
     paddingRight:13,

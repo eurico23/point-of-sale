@@ -83,9 +83,12 @@ const theme = createTheme({
     textLarge:{
       fontWeight: 'bold',
       fontSize: 16,
+      color:'black',
     },
     textExtraLarge:{
-      
+      fontWeight: 'bold',
+      fontSize: 18,
+      color:'black',
     },
 
     headerXSmall:{

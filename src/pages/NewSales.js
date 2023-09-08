@@ -1,13 +1,19 @@
+import { useNavigation } from "@react-navigation/native";
 import React, {useState} from 'react';
-import {View, TextInput, StyleSheet, Image, Pressable, Button} from 'react-native';
+import {View, TextInput, StyleSheet, Image, Pressable} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Text, Box} from '../styles/theme';
 import Categories from '../components/Categories';
 import {ProductsDummy} from '../components/ProductsDummy';
 import {FlatList} from 'react-native-gesture-handler';
+import Button from '../components/Button';
+
+
+
 
 const NewSales = () => {
+  const navigation = useNavigation();
   const [searchProduct, setSearchProduct] = useState('');
 
   function buttonSuccess() {
@@ -27,12 +33,14 @@ const NewSales = () => {
       <View style={styles.searchBar}>
         <FontAwesome5 name="search" size={20} color="#2F3036" />
         <TextInput
+        color="#1E1E1E"
+        style={{height:40, width:'100%'}}
           placeholder="Search"
           value={searchProduct}
           onChangeText={setSearchProduct}></TextInput>
       </View>
 
-      <View>
+      <View style={{ marginBottom:240, }}>
         <Categories />
 
         <FlatList
@@ -109,7 +117,28 @@ const NewSales = () => {
         />
         
       </View>
-      
+      <Box style={styles.buttonArea}>
+        <Box backgroundColor='white' flex={1} flexDirection='row' justifyContent='flex-end' gap='m' paddingVertical='s'>
+          <Text variant='textLarge' color='textDefaultColor'>Total:</Text>
+          <Text variant='textLarge'>10.00.000 Kz</Text>
+        </Box>
+          <Box flexDirection="row" gap="m">
+            <Button
+              title="CLEAR"
+              variant="buttonWarning"
+              onPress={buttonWarning}
+            />
+            <Button title="SAVE" variant="defaults" onPress={() => navigation.navigate('CurrentSales')} />
+          </Box>
+
+          <Box>
+            <Button
+              title="PAY"
+              variant="buttonSuccess"
+              onPress={buttonSuccess}
+            />
+          </Box>
+        </Box> 
     </Box>
   );
 };
@@ -125,7 +154,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     borderWidth: 1,
     borderColor: '#D4D6DD',
-    marginBottom: 20,
+    marginBottom: 10,
   },
   productListing: {
     flexDirection: 'row',
@@ -150,4 +179,13 @@ const styles = StyleSheet.create({
     padding: 5,
     borderRadius: 26,
   },
+
+  buttonArea:{
+    position: 'absolute',  
+    left: 0, 
+    right: 0, 
+    bottom: 0, 
+    paddingHorizontal:10,
+
+  }
 });
