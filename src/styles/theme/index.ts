@@ -15,6 +15,7 @@ const palette = {
     greyMedium: '#494A50',
     greyLight: '#71727A',
     greyLightest: '#D4D6DD',
+    greyExtraLightest:'#F8F9FE',
 
     red: '#ED3241',
     redLight: '#FF616D',
@@ -43,6 +44,7 @@ const theme = createTheme({
     warning:palette.orange,
     success:palette.greenDark,
     greyLightest:palette.greyLightest,
+    greyExtraLightest:palette.greyExtraLightest,
     white: palette.white,
     transparent:palette.transparent,
   },

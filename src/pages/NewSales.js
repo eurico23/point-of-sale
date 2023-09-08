@@ -13,6 +13,10 @@ import Button from '../components/Button';
 
 
 const NewSales = () => {
+
+
+
+  
   const navigation = useNavigation();
   const [searchProduct, setSearchProduct] = useState('');
 
@@ -45,6 +49,7 @@ const NewSales = () => {
 
         <FlatList
           data={ProductsDummy}
+          keyExtractor={(item) => item.id}
           renderItem={({item}) => {
             return (
               <Box
@@ -57,7 +62,6 @@ const NewSales = () => {
                     textAlign="center"
                     color="textDefaultColor"
                     fontSize={14}>
-                    {' '}
                     {item.price} Kz
                   </Text>
                 </View>
@@ -87,8 +91,6 @@ const NewSales = () => {
 
                       <Pressable
                         style={{
-                          //  backgroundColor: 'white',
-                          // paddingHorizontal: 18,
                           paddingVertical: 0,
                         }}>
                         <Text variant="headerMedium">10</Text>
@@ -117,8 +119,8 @@ const NewSales = () => {
         />
         
       </View>
-      <Box style={styles.buttonArea}>
-        <Box backgroundColor='white' flex={1} flexDirection='row' justifyContent='flex-end' gap='m' paddingVertical='s'>
+      <Box backgroundColor="greyExtraLightest" style={styles.buttonArea}>
+        <Box flex={1} flexDirection='row' justifyContent='flex-end' gap='m' paddingVertical='s'>
           <Text variant='textLarge' color='textDefaultColor'>Total:</Text>
           <Text variant='textLarge'>10.00.000 Kz</Text>
         </Box>

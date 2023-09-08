@@ -34,6 +34,12 @@ export default function Actions() {
             <Text style={styles.labelButton}>Reports</Text>
         </TouchableOpacity>
 
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('EditSale')}> 
+        <View style={[styles.areaButton, style={backgroundColor: '#FF6854'}]}>
+            </View>
+            <Text style={styles.labelButton}>Edit Sales</Text>
+        </TouchableOpacity>
+
         <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('NewSales')}> 
         <View style={[styles.areaButton, style={backgroundColor: '#FF6854'}]}>
             </View>
@@ -53,11 +59,7 @@ export default function Actions() {
             <Text style={styles.labelButton} >Add New product</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('Expenditure')}> 
-        <View style={[styles.areaButton, style={backgroundColor: '#FF6854'}]}>
-            </View>
-            <Text style={styles.labelButton}>Edit Sales</Text>
-        </TouchableOpacity>
+
         
         <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('Reports')}> 
           <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>

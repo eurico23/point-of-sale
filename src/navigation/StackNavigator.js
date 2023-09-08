@@ -10,6 +10,8 @@ import Reports from "../../src/pages/Reports";
 import AddNewProduct from "../../src/pages/AddNewProduct";
 import CurrentSales from '../pages/CurrentSales';
 import NewSales from '../pages/NewSales';
+import EditSale from '../pages/EditSale';
+
 const Stack = createStackNavigator();
 
 const StackNavigator = () => {
@@ -23,6 +25,7 @@ const StackNavigator = () => {
             <Stack.Screen name="NewSales" component={NewSales} />
             <Stack.Screen name="AddNewProduct" component={AddNewProduct} />
             <Stack.Screen name="CurrentSales" component={CurrentSales} />
+            <Stack.Screen name="EditSale" component={EditSale} />
           </Stack.Navigator>
       </NavigationContainer>
   );
