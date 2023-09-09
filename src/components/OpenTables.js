@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, {useState} from 'react';
 import {StyleSheet, TouchableOpacity, View, Pressable, Alert} from 'react-native';
 import {Text, Box} from '../styles/theme';
@@ -8,6 +9,7 @@ import Button from './Button';
 
 
 export default function OpenTables({data}) {
+  const navigation = useNavigation();
   const [showContent, setShowContent] = useState(false);
 
   function buttonSuccess() {
@@ -67,14 +69,13 @@ export default function OpenTables({data}) {
             </Box>
           ))}
 
-
           <Box flexDirection="row" gap="m">
             <Button
               title="DELETE"
               variant="buttonWarning"
               onPress={buttonWarning}
             />
-            <Button title="EDIT" variant="defaults" onPress={clickdefault} />
+            <Button title="EDIT" variant="defaults" onPress={() => navigation.navigate('EditSale')} />
           </Box>
 
           <Box>

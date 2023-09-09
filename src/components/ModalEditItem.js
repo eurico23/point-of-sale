@@ -18,7 +18,7 @@ const ModalEditItem = ({modalVisible, toggleModal}) => {
       onRequestClose={toggleModal}>
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
-          <Text variant="headerLarge" marginBottom='l'>Hello !</Text>
+          <Text variant="headerLarge" marginBottom='l'>Cuca</Text>
 
           <Box marginBottom='l' flexDirection="row" justifyContent="space-between">
             <Box
@@ -40,7 +40,7 @@ const ModalEditItem = ({modalVisible, toggleModal}) => {
                 style={{
                   paddingVertical: 0,
                 }}>
-                <Text variant="headerMedium">10</Text>
+                <Text variant="headerMedium">5</Text>
               </Pressable>
 
               <Pressable>
@@ -57,7 +57,7 @@ const ModalEditItem = ({modalVisible, toggleModal}) => {
           <Text color="black" fontWeight="bold" marginBottom='s'>
             Enter Price
           </Text>
-          <TextInput  style={styles.textInput}  placeholder="Search"></TextInput>
+          <TextInput  style={styles.textInput} value='1000'  placeholder="Search"></TextInput>
 
                 <Box flexDirection='row' gap='xl'>
 

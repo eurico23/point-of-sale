@@ -1,13 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, View } from 'react-native';
+import {Text, Box} from '../styles/theme';
 
 
 export default function Balance({saldo, gastos}) {
   return (
     <View style={styles.container}>
        <View style={styles.title}>
-            <Text>Janeiro 2023</Text>
+            <Text color="textDefaultColor" >Janeiro 2023</Text>
        </View>
 
 

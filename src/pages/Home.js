@@ -110,7 +110,8 @@ export default function Home ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    color:'#71727A',
   },
   title:{
     fontWeight: 'bold',

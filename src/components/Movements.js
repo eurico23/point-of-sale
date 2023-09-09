@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
   label:{
     fontWeight:'bold',
     marginBottom:5,
+    color:'#000000',
   },
   value:{
     color:'#BDB8B8',

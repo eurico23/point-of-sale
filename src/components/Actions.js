@@ -110,7 +110,9 @@ const styles = StyleSheet.create({
    
     
   },
- 
+  labelButton:{
+    color:'#71727A',
+  },
   areaButton: {
     borderRadius: 8,
     paddingTop:8,
@@ -123,6 +125,7 @@ const styles = StyleSheet.create({
   actionButton: {
     alignItems: 'center',
     marginBottom:30,
+    color:'#71727A',
     
   }
 });
