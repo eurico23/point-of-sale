@@ -48,6 +48,7 @@ const NewSales = () => {
         <Categories />
 
         <FlatList
+        
           data={ProductsDummy}
           keyExtractor={(item) => item.id}
           renderItem={({item}) => {
@@ -119,7 +120,7 @@ const NewSales = () => {
         />
         
       </View>
-      <Box backgroundColor="greyExtraLightest" style={styles.buttonArea}>
+      <Box style={styles.buttonArea}>
         <Box flex={1} flexDirection='row' justifyContent='flex-end' gap='m' paddingVertical='s'>
           <Text variant='textLarge' color='textDefaultColor'>Total:</Text>
           <Text variant='textLarge'>10.00.000 Kz</Text>
@@ -188,6 +189,6 @@ const styles = StyleSheet.create({
     right: 0, 
     bottom: 0, 
     paddingHorizontal:10,
-
+    backgroundColor:'#F8F9FE',
   }
 });

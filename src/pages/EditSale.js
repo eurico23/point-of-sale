@@ -1,15 +1,20 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {View, TextInput, StyleSheet, Pressable, TouchableOpacity} from 'react-native';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import {View, Modal, StyleSheet, Pressable, TouchableOpacity} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Text, Box} from '../styles/theme';
 import {ProductsDummy} from '../components/ProductsDummy';
 import {FlatList} from 'react-native-gesture-handler';
 import Button from '../components/Button';
+import ModalEditItem from '../components/ModalEditItem';
+
 
 const EditSale = () => {
+    const [modalVisible, setModalVisible] = useState(false);
+    const toggleModal = () => {
+        setModalVisible(!modalVisible);
+      };
 
     React.useLayoutEffect(() => {
         navigation.setOptions({
@@ -32,7 +37,6 @@ const EditSale = () => {
         });
       }, [navigation]);
   const navigation = useNavigation();
-  const [searchProduct, setSearchProduct] = useState('');
 
   function buttonSuccess() {
     console.log('buttonSuccess');
@@ -48,6 +52,11 @@ const EditSale = () => {
 
   return (
     <Box backgroundColor="mainBackground" flex={1} paddingHorizontal="s">  
+
+
+<ModalEditItem modalVisible={modalVisible} toggleModal={toggleModal} />
+
+
 
       <View style={{marginBottom: 180}}>
         <FlatList
@@ -106,7 +115,7 @@ const EditSale = () => {
                   </Text>
                 </Box>
                 <Box>
-                  <Pressable>
+                  <Pressable  onPress={() => setModalVisible(true)}>
                     <Text color="black" fontWeight="bold" variant="textLarge">
                       100.00 Kz
                     </Text>
@@ -220,4 +229,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     backgroundColor:'#F8F9FE',
   },
+ 
 });

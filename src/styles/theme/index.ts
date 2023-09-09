@@ -104,7 +104,10 @@ const theme = createTheme({
         fontWeight: 'bold',
         color:'headerDefaultColor',
     },
-    headerLarge:{       
+    headerLarge:{   
+      fontSize: 22,
+        fontWeight: 'bold',
+        color:'black',    
     },
     headingXlarge:{
         
