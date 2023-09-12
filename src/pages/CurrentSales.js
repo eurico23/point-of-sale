@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   StyleSheet,
   View,
@@ -11,6 +12,7 @@ import { useNavigation } from "@react-navigation/native";
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import OpenTables from '../components/OpenTables';
 import { Text, Box } from '../styles/theme';
+import ModalDeleteSale from '../components/ModalDeleteSale';
 
 const openTables = [
   {
@@ -53,11 +55,18 @@ const openTables = [
 
 
 const NewSales = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const toggleModal = () => {
+      setModalVisible(!modalVisible);
+    };
+
+
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar />
       <Box backgroundColor="mainBackground" flex={1}>
+      <ModalDeleteSale modalVisible={modalVisible} toggleModal={toggleModal} />
         <ScrollView>
           <View>
          

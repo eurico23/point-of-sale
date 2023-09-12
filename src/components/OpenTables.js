@@ -4,11 +4,16 @@ import {StyleSheet, TouchableOpacity, View, Pressable, Alert} from 'react-native
 import {Text, Box} from '../styles/theme';
 import Card from './Card';
 import Button from './Button';
-
+import ModalDeleteSale from '../components/ModalDeleteSale';
 
 
 
 export default function OpenTables({data}) {
+  const [modalVisible, setModalVisible] = useState(false);
+  const toggleModal = () => {
+      setModalVisible(!modalVisible);
+    };
+
   const navigation = useNavigation();
   const [showContent, setShowContent] = useState(false);
 
@@ -24,8 +29,11 @@ export default function OpenTables({data}) {
     console.log('default');
   }
 
+
   return (
+    
     <Card>
+      <ModalDeleteSale modalVisible={modalVisible} toggleModal={toggleModal} />
       <TouchableOpacity onPress={() => setShowContent(!showContent)}>
         <View style={styles.row}>
           <Text fontWeight="bold" color="black">
@@ -73,16 +81,16 @@ export default function OpenTables({data}) {
             <Button
               title="DELETE"
               variant="buttonWarning"
-              onPress={buttonWarning}
+              onPress={() => setModalVisible(true)}
             />
-            <Button title="EDIT" variant="defaults" onPress={() => navigation.navigate('EditSale')} />
+            <Button title="EDIT" variant="defaults"  />
           </Box>
 
           <Box>
             <Button
               title="PAY"
               variant="buttonSuccess"
-              onPress={buttonSuccess}
+              onPress={() => navigation.navigate('PaymentMethod')}
             />
           </Box>
 

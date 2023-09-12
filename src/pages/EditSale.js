@@ -1,13 +1,13 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {View, Modal, StyleSheet, Pressable, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Pressable, TouchableOpacity} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Text, Box} from '../styles/theme';
 import {ProductsDummy} from '../components/ProductsDummy';
 import {FlatList} from 'react-native-gesture-handler';
 import Button from '../components/Button';
-import ModalEditItem from '../components/ModalEditItem';
+import ModalEditSaleItem from '../components/ModalEditSaleItem';
 
 
 const EditSale = () => {
@@ -54,7 +54,7 @@ const EditSale = () => {
     <Box backgroundColor="mainBackground" flex={1} paddingHorizontal="s">  
 
 
-<ModalEditItem modalVisible={modalVisible} toggleModal={toggleModal} />
+<ModalEditSaleItem modalVisible={modalVisible} toggleModal={toggleModal} />
 
 
 
