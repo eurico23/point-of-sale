@@ -6,6 +6,7 @@ import {Text, Box} from '../styles/theme';
 
 
 const PaymentMethod = () => {
+  const navigation = useNavigation();
   return (
     <Box backgroundColor="mainBackground" flex={1}  justifyContent='center'>
       <Box flexDirection="row" gap="l" alignSelf='center'>
@@ -14,7 +15,7 @@ const PaymentMethod = () => {
               <Text variant='textLarge'>Card</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.cards}> 
+            <TouchableOpacity style={styles.cards} onPress={() => navigation.navigate('PaymentConfirmation')}> 
               <FontAwesome name="money" size={30} color="#006FFD"  />
               <Text variant='textLarge'>Cash</Text>
             </TouchableOpacity>
@@ -38,6 +39,5 @@ const styles = StyleSheet.create({
     alignItems:'center', 
     paddingVertical:10,
   }
-  
 
 });

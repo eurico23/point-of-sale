@@ -123,7 +123,7 @@ const NewSales = () => {
       <Box style={styles.buttonArea}>
         <Box flex={1} flexDirection='row' justifyContent='flex-end' gap='m' paddingVertical='s'>
           <Text variant='textLarge' color='textDefaultColor'>Total:</Text>
-          <Text variant='textLarge'>10.00.000 Kz</Text>
+          <Text variant='textLarge' color="highlight">10.00.000 Kz</Text>
         </Box>
           <Box flexDirection="row" gap="m">
             <Button

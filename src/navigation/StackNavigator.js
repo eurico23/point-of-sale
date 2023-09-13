@@ -12,7 +12,7 @@ import CurrentSales from '../pages/CurrentSales';
 import NewSales from '../pages/NewSales';
 import EditSale from '../pages/EditSale';
 import PaymentMethod from '../pages/PaymentMethod';
-
+import PaymentConfirmation from '../pages/PaymentConfirmation';
 const Stack = createStackNavigator();
 
 const StackNavigator = () => {
@@ -28,6 +28,7 @@ const StackNavigator = () => {
             <Stack.Screen name="CurrentSales" component={CurrentSales} />
             <Stack.Screen name="EditSale" component={EditSale} />
             <Stack.Screen name="PaymentMethod" component={PaymentMethod} />
+            <Stack.Screen name="PaymentConfirmation" component={PaymentConfirmation} />
           </Stack.Navigator>
       </NavigationContainer>
   );

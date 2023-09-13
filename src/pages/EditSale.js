@@ -143,7 +143,7 @@ const EditSale = () => {
                       style={{textAlign: 'center',  }}
                       name="codepen"
                       size={30}
-                      color="#006FFD"
+                      color="#000"
                      
                     />
           </TouchableOpacity>
@@ -159,7 +159,7 @@ const EditSale = () => {
           <Text variant="textLarge" color="textDefaultColor">
             Total:
           </Text>
-          <Text variant="textLarge">10.00.000 Kz</Text>
+          <Text variant="textLarge" color="highlight">10.00.000 Kz</Text>
         </Box>
         <Box flexDirection="row" gap="m">
           <Button
