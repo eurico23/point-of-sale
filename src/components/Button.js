@@ -11,6 +11,9 @@ const Button = ({title, variant, onPress }) => {
     case 'buttonWarning':
       buttonVariantText = 'buttonWarningText';
       break;
+    case 'buttonInfo':
+      buttonVariantText = 'buttonInfoText';
+      break;
     default:
       // Default styling for other cases
       buttonVariantText = 'buttonDefaultText';

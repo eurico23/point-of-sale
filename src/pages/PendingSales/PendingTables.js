@@ -1,39 +1,29 @@
-import { useNavigation } from "@react-navigation/native";
+import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {StyleSheet, TouchableOpacity, View, Pressable, Alert} from 'react-native';
-import {Text, Box} from '../styles/theme';
-import Card from './Card';
-import Button from './Button';
-import ModalDeleteSale from '../components/ModalDeleteSale';
+import {
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import {Text, Box} from '../../styles/theme';
+import Card from '../../components/Card';
+import Button from '../../components/Button';
+import PendingModalContent from './PendingModalContent';
+import Modal from '../../components/Modal';
 
-
-
-export default function OpenTables({data}) {
+export default function PendingTables({data}) {
   const [modalVisible, setModalVisible] = useState(false);
   const toggleModal = () => {
-      setModalVisible(!modalVisible);
-    };
+    setModalVisible(!modalVisible);
+  };
 
   const navigation = useNavigation();
   const [showContent, setShowContent] = useState(false);
 
-  function buttonSuccess() {
-    console.log('buttonSuccess');
-  }
-
-  function buttonWarning() {
-    console.log('Cancel buttonWarning');
-  }
-
-  function clickdefault() {
-    console.log('default');
-  }
 
 
   return (
-    
     <Card>
-      <ModalDeleteSale modalVisible={modalVisible} toggleModal={toggleModal} />
       <TouchableOpacity onPress={() => setShowContent(!showContent)}>
         <View style={styles.row}>
           <Text fontWeight="bold" color="black">
@@ -41,8 +31,6 @@ export default function OpenTables({data}) {
           </Text>
           <Text>{data.date} ago</Text>
         </View>
-        
-
 
         <View style={styles.row}>
           <Text>{data.tableItemCount} Items </Text>
@@ -81,9 +69,13 @@ export default function OpenTables({data}) {
             <Button
               title="DELETE"
               variant="buttonWarning"
-              onPress={() => setModalVisible(true)}
+              onPress={toggleModal}
             />
-            <Button title="EDIT" variant="defaults"  />
+            <Modal modalVisible={modalVisible} toggleModal={toggleModal}>
+              <PendingModalContent toggleModal={toggleModal} />
+            </Modal>
+
+            <Button title="EDIT" variant="defaults"  onPress={() => navigation.navigate('EditSale')} />
           </Box>
 
           <Box>
@@ -93,8 +85,6 @@ export default function OpenTables({data}) {
               onPress={() => navigation.navigate('PaymentMethod')}
             />
           </Box>
-
-          
         </Box>
       )}
     </Card>

@@ -3,16 +3,16 @@ import React, {useState} from 'react';
 import {View, TextInput, StyleSheet, Image, Pressable} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {Text, Box} from '../styles/theme';
-import Categories from '../components/Categories';
-import {ProductsDummy} from '../components/ProductsDummy';
+import {Text, Box} from '../../styles/theme';
+import Categories from '../../components/Categories';
+import {ProductsDummy} from '../../components/ProductsDummy';
 import {FlatList} from 'react-native-gesture-handler';
-import Button from '../components/Button';
+import Button from '../../components/Button';
 
 
 
 
-const NewSales = () => {
+const NewSale = () => {
 
 
 
@@ -131,7 +131,7 @@ const NewSales = () => {
               variant="buttonWarning"
               onPress={buttonWarning}
             />
-            <Button title="SAVE" variant="defaults" onPress={() => navigation.navigate('CurrentSales')} />
+            <Button title="SAVE" variant="defaults" onPress={() => navigation.navigate('PendingSales')} />
           </Box>
 
           <Box>
@@ -146,7 +146,7 @@ const NewSales = () => {
   );
 };
 
-export default NewSales;
+export default NewSale;
 
 const styles = StyleSheet.create({
   searchBar: {

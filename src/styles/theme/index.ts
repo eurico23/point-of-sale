@@ -141,6 +141,11 @@ const theme = createTheme({
       fontWeight: 'bold',
     },
 
+    buttonInfoText: {
+      color: 'white',
+      fontWeight: 'bold',
+    },
+
     defaults: {
       fontSize: 14,
       color:'textDefaultColor',
@@ -164,6 +169,12 @@ const theme = createTheme({
       backgroundColor: 'success',
        borderWidth: 2,
        borderColor:'success',
+    },
+
+    buttonInfo: {
+      backgroundColor: 'blue',
+       borderWidth: 2,
+       borderColor:'blue',
     },
 
     defaults: {

@@ -7,12 +7,12 @@ import Home from "../../src/pages/Home";
 import Products from "../../src/pages/Products";
 import Expenditure from "../../src/pages/Expenditure";
 import Reports from "../../src/pages/Reports";
-import AddNewProduct from "../../src/pages/AddNewProduct";
-import CurrentSales from '../pages/CurrentSales';
-import NewSales from '../pages/NewSales';
-import EditSale from '../pages/EditSale';
-import PaymentMethod from '../pages/PaymentMethod';
-import PaymentConfirmation from '../pages/PaymentConfirmation';
+import AddNewProduct from "../pages/AddNewProduct/AddNewProduct";
+import PendingSales from '../pages/PendingSales/PendingSales';
+import NewSale from '../pages/NewSale/NewSale';
+import EditSale from '../pages/EditSale/EditSale';
+import PaymentMethod from '../pages/Payment/PaymentMethod';
+import PaymentConfirmation from '../pages/Payment/PaymentConfirmation';
 const Stack = createStackNavigator();
 
 const StackNavigator = () => {
@@ -23,9 +23,9 @@ const StackNavigator = () => {
             <Stack.Screen name="Products" component={Products}/>
             <Stack.Screen name="Expenditure" component={Expenditure} />
             <Stack.Screen name="Reports" component={Reports} />
-            <Stack.Screen name="NewSales" component={NewSales} />
+            <Stack.Screen name="NewSale" component={NewSale} />
             <Stack.Screen name="AddNewProduct" component={AddNewProduct} />
-            <Stack.Screen name="CurrentSales" component={CurrentSales} />
+            <Stack.Screen name="PendingSales" component={PendingSales} />
             <Stack.Screen name="EditSale" component={EditSale} />
             <Stack.Screen name="PaymentMethod" component={PaymentMethod} />
             <Stack.Screen name="PaymentConfirmation" component={PaymentConfirmation} />

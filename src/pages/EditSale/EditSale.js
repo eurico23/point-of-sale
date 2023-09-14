@@ -3,18 +3,20 @@ import React, {useState} from 'react';
 import {View, StyleSheet, Pressable, TouchableOpacity} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {Text, Box} from '../styles/theme';
-import {ProductsDummy} from '../components/ProductsDummy';
+import {Text, Box} from '../../styles/theme';
+import {ProductsDummy} from '../../components/ProductsDummy';
 import {FlatList} from 'react-native-gesture-handler';
-import Button from '../components/Button';
-import ModalEditSaleItem from '../components/ModalEditSaleItem';
-
+import Button from '../../components/Button';
+import EditForm from './EditForm';
+import Modal from "../../components/Modal";
 
 const EditSale = () => {
-    const [modalVisible, setModalVisible] = useState(false);
-    const toggleModal = () => {
-        setModalVisible(!modalVisible);
-      };
+  const [modalVisible, setModalVisible] = useState(false);
+  const toggleModal = () => {
+      setModalVisible(!modalVisible);
+    console.log("Modal")
+    };
+
 
     React.useLayoutEffect(() => {
         navigation.setOptions({
@@ -54,8 +56,9 @@ const EditSale = () => {
     <Box backgroundColor="mainBackground" flex={1} paddingHorizontal="s">  
 
 
-<ModalEditSaleItem modalVisible={modalVisible} toggleModal={toggleModal} />
-
+<Modal modalVisible={modalVisible} toggleModal={toggleModal}>
+                    <EditForm toggleModal={toggleModal} />
+              </Modal>
 
 
       <View style={{marginBottom: 180}}>
@@ -115,7 +118,7 @@ const EditSale = () => {
                   </Text>
                 </Box>
                 <Box>
-                  <Pressable  onPress={() => setModalVisible(true)}>
+                  <Pressable  onPress={toggleModal}>
                     <Text color="black" fontWeight="bold" variant="textLarge">
                       100.00 Kz
                     </Text>
@@ -130,6 +133,7 @@ const EditSale = () => {
                         Edit
                       </Text>
                   </Pressable>
+                 
                 </Box>
               </Box>
             );
@@ -137,7 +141,7 @@ const EditSale = () => {
         />
       </View>
       <Box style={styles.buttonArea}>
-          <TouchableOpacity style={{marginTop:6,marginBottom:-16, }} onPress={() => navigation.navigate('NewSales')}>
+          <TouchableOpacity style={{marginTop:6,marginBottom:-16, }} onPress={() => navigation.navigate('NewSale')}>
           <Text   variant="textLarge" textAlign='center' >Add new Item </Text>
         <AntDesign
                       style={{textAlign: 'center',  }}
@@ -170,7 +174,7 @@ const EditSale = () => {
           <Button
             title="SAVE"
             variant="defaults"
-            onPress={() => navigation.navigate('CurrentSales')}
+            onPress={() => navigation.navigate('PendingSales')}
           />
         </Box>
 

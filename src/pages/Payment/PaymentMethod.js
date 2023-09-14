@@ -2,7 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import {StyleSheet,  TouchableOpacity} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Text, Box} from '../styles/theme';
+import {Text, Box} from '../../styles/theme';
 
 
 const PaymentMethod = () => {

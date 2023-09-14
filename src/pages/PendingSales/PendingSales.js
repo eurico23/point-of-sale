@@ -1,18 +1,16 @@
-import { useState } from 'react';
 import {
   StyleSheet,
   View,
   ScrollView,
   SafeAreaView,
   StatusBar,
-  Pressable,
   TouchableOpacity,
 } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import OpenTables from '../components/OpenTables';
-import { Text, Box } from '../styles/theme';
-import ModalDeleteSale from '../components/ModalDeleteSale';
+import OpenTables from './PendingTables';
+import { Text, Box } from '../../styles/theme';
+
 
 const openTables = [
   {
@@ -54,11 +52,7 @@ const openTables = [
 ];
 
 
-const NewSales = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-  const toggleModal = () => {
-      setModalVisible(!modalVisible);
-    };
+const PendingSales = () => {
 
 
   const navigation = useNavigation();
@@ -66,11 +60,11 @@ const NewSales = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar />
       <Box backgroundColor="mainBackground" flex={1}>
-      <ModalDeleteSale modalVisible={modalVisible} toggleModal={toggleModal} />
+      
         <ScrollView>
           <View>
          
-          <TouchableOpacity onPress={() => navigation.navigate('NewSales')}> 
+          <TouchableOpacity onPress={() => navigation.navigate('NewSale')}> 
             <View style={styles.content}>
               <Box borderRadius='xl' bg='cardPrimaryBackground' padding='m'>
                 <AntDesign name="pluscircle" size={30} color="#006FFD" />
@@ -90,7 +84,7 @@ const NewSales = () => {
   );
 };
 
-export default NewSales;
+export default PendingSales;
 
 const styles = StyleSheet.create({
   container: {
