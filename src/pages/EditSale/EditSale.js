@@ -130,7 +130,7 @@ const EditSale = () => {
                       color="#006FFD"
                     />
                     <Text textAlign='right'>
-                        Edit
+                        Editar
                       </Text>
                   </Pressable>
                  
@@ -142,7 +142,7 @@ const EditSale = () => {
       </View>
       <Box style={styles.buttonArea}>
           <TouchableOpacity style={{marginTop:6,marginBottom:-16, }} onPress={() => navigation.navigate('NewSale')}>
-          <Text   variant="textLarge" textAlign='center' >Add new Item </Text>
+          <Text   variant="textLarge" textAlign='center'>Adicionar novo item</Text>
         <AntDesign
                       style={{textAlign: 'center',  }}
                       name="codepen"
@@ -167,19 +167,19 @@ const EditSale = () => {
         </Box>
         <Box flexDirection="row" gap="m">
           <Button
-            title="CLEAR"
+            title="EXCLUIR"
             variant="buttonWarning"
             onPress={buttonWarning}
           />
           <Button
-            title="SAVE"
+            title="SALVAR"
             variant="defaults"
             onPress={() => navigation.navigate('PendingSales')}
           />
         </Box>
 
         <Box>
-          <Button title="PAY" variant="buttonSuccess" onPress={buttonSuccess} />
+          <Button title="PAGAR" variant="buttonSuccess" onPress={buttonSuccess} />
         </Box>
       </Box>
     </Box>

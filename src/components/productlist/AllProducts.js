@@ -85,7 +85,7 @@ export default function AllProducts({ data }) {
           />
 
           <Button
-            title="Edit" />
+            title="Editar" />
       </View>
     </View>
   );

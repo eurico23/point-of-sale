@@ -11,7 +11,6 @@ import AddNewProduct from "../pages/AddNewProduct/AddNewProduct";
 import PendingSales from '../pages/PendingSales/PendingSales';
 import NewSale from '../pages/NewSale/NewSale';
 import EditSale from '../pages/EditSale/EditSale';
-import PaymentMethod from '../pages/Payment/PaymentMethod';
 import PaymentConfirmation from '../pages/Payment/PaymentConfirmation';
 const Stack = createStackNavigator();
 
@@ -27,7 +26,6 @@ const StackNavigator = () => {
             <Stack.Screen name="AddNewProduct" component={AddNewProduct} />
             <Stack.Screen name="PendingSales" component={PendingSales} />
             <Stack.Screen name="EditSale" component={EditSale} />
-            <Stack.Screen name="PaymentMethod" component={PaymentMethod} />
             <Stack.Screen name="PaymentConfirmation" component={PaymentConfirmation} />
           </Stack.Navigator>
       </NavigationContainer>

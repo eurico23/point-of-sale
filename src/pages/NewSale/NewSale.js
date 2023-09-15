@@ -127,16 +127,16 @@ const NewSale = () => {
         </Box>
           <Box flexDirection="row" gap="m">
             <Button
-              title="CLEAR"
+              title="EXCLUIR"
               variant="buttonWarning"
               onPress={buttonWarning}
             />
-            <Button title="SAVE" variant="defaults" onPress={() => navigation.navigate('PendingSales')} />
+            <Button title="SALVAR" variant="defaults" onPress={() => navigation.navigate('PendingSales')} />
           </Box>
 
           <Box>
             <Button
-              title="PAY"
+              title="PAGAR"
               variant="buttonSuccess"
               onPress={buttonSuccess}
             />

@@ -67,7 +67,7 @@ export default function PendingTables({data}) {
 
           <Box flexDirection="row" gap="m">
             <Button
-              title="DELETE"
+              title="EXCLUIR"
               variant="buttonWarning"
               onPress={toggleModal}
             />
@@ -75,14 +75,14 @@ export default function PendingTables({data}) {
               <PendingModalContent toggleModal={toggleModal} />
             </Modal>
 
-            <Button title="EDIT" variant="defaults"  onPress={() => navigation.navigate('EditSale')} />
+            <Button title="EDITAR" variant="defaults"  onPress={() => navigation.navigate('EditSale')} />
           </Box>
 
           <Box>
             <Button
-              title="PAY"
+              title="PAGAR"
               variant="buttonSuccess"
-              onPress={() => navigation.navigate('PaymentMethod')}
+              onPress={() => navigation.navigate('PaymentConfirmation')}
             />
           </Box>
         </Box>

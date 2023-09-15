@@ -15,15 +15,15 @@ const PendingModalContent = ({ toggleModal } ) => {
     <View>    
           <Text variant="headerLarge">Cuca</Text>
           <Text variant="textMedium" marginBottom='s'>3 Items</Text>
-          <Text variant="textMedium" marginBottom='l' textAlign='center'>Are you sure? It will delete Permanently</Text>
+          <Text variant="textMedium" marginBottom='l' textAlign='center'>Tem certeza? Será excluído permanentemente</Text>
          
           <Box  flexDirection="row" gap="m">
             <Button
-              title="Yes Delete"
+              title="Sim"
               variant="buttonWarning"
               onPress={deleteItem}
             />
-            <Button title="No" variant="buttonSuccess" onPress={toggleModal} />
+            <Button  title="Não" variant="buttonSuccess" onPress={toggleModal} />
           </Box>
     </View>
   );

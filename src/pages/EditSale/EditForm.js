@@ -55,7 +55,7 @@ const EditForm = ({toggleModal}) => {
         </Box>
       </Box>
       <Text color="black" fontWeight="bold" marginBottom="s">
-        Enter Price
+      Insira o preço
       </Text>
       <Box flexDirection="row">
         <TextInput
@@ -67,20 +67,19 @@ const EditForm = ({toggleModal}) => {
       <Box flexDirection="row" gap="xl">
         <Box style={{width: '50%'}} alignItems="center">
           <Text color="black" fontWeight="bold" marginBottom="s">
-            Discount (%)
+          Desconto (%)
           </Text>
           <TextInput
             style={styles.textInput}
-            placeholder="Discount"></TextInput>
+            placeholder="Desconto"></TextInput>
         </Box>
 
         <Box style={{width: '50%'}} alignItems="center">
-          <Text color="black" fontWeight="bold" marginBottom="s">
-            Discount Per Item
+          <Text color="black" fontWeight="bold" marginBottom="s">Desconto por item
           </Text>
           <TextInput
             style={styles.textInput}
-            placeholder="Discount"></TextInput>
+            placeholder="Desconto"></TextInput>
         </Box>
       </Box>
 
@@ -93,7 +92,7 @@ const EditForm = ({toggleModal}) => {
             tintColors={{true: '#006FFD', false: 'black'}}
           />
           <Text style={{alignSelf: 'center'}} color="black" fontWeight="bold">
-            Give as Free
+          Grátis
           </Text>
         </Box>
 
@@ -106,20 +105,19 @@ const EditForm = ({toggleModal}) => {
               onValueChange={newValue => setToggleCheckBox(newValue)}
               tintColors={{true: '#006FFD', false: 'black'}}
             />
-            <Text style={{alignSelf: 'center'}} color="black" fontWeight="bold">
-              Give as Gift
+            <Text style={{alignSelf: 'center'}} color="black" fontWeight="bold">Oferta
             </Text>
           </Box>
         </Box>
       </Box>
 
       <Box flexDirection="row" gap="m">
-        <Button title="Remove" variant="buttonWarning" />
-        <Button title="UPDATE" variant="buttonSuccess" />
+        <Button title="REMOVER" variant="buttonWarning" />
+        <Button title="ATUALIZAR" variant="buttonSuccess" />
       </Box>
 
       <Pressable onPress={toggleModal}>
-        <Text style={{textAlign: 'center'}}>Hide Modal</Text>
+        <Text style={{textAlign: 'center'}}>Fechar Modal</Text>
         <AntDesign
           style={{textAlign: 'center'}}
           name="closecircle"

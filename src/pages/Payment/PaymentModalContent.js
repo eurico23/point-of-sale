@@ -6,10 +6,10 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 const PaymentModalContent = ({ toggleModal } ) => {
   return (
     <Box alignItems='center'>    
-          <Text variant="headerLarge" textAlign='center' marginBottom='s'>Payment Successfully</Text>
+          <Text variant="headerLarge" textAlign='center' marginBottom='s'>Pagamento realizado com sucesso</Text>
           <FontAwesome5 style={styles.icon} name="check"  />
           <Box flexDirection="row" marginTop='l'>
-            <Button title="CLOSE" variant="buttonInfo" onPress={toggleModal} />
+            <Button title="FECHAR" variant="buttonInfo" onPress={toggleModal} />
           </Box>
     </Box>
   );

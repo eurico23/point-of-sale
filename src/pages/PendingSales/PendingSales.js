@@ -69,11 +69,11 @@ const PendingSales = () => {
               <Box borderRadius='xl' bg='cardPrimaryBackground' padding='m'>
                 <AntDesign name="pluscircle" size={30} color="#006FFD" />
               </Box>
-              <Text variant='headerMedium'>New Sale</Text>
+              <Text variant='headerMedium'>Nova Venda</Text>
             </View>
             </TouchableOpacity>
           </View>
-          <Text variant='textMedium' color='highlight' textAlign='center' marginBottom='m'>Pending Sales: 3</Text>
+          <Text variant='textMedium' color='highlight' textAlign='center' marginBottom='m'>Vendas Pendentes: 3</Text>
         
           {openTables.map((item) => (
           <OpenTables key={item.id} data={item} />
