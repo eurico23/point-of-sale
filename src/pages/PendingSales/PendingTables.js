@@ -67,7 +67,7 @@ export default function PendingTables({data}) {
 
           <Box flexDirection="row" gap="m">
             <Button
-              title="EXCLUIR"
+              title="APAGAR"
               variant="buttonWarning"
               onPress={toggleModal}
             />

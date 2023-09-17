@@ -1,11 +1,10 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {View, StyleSheet, Pressable, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Pressable, TouchableOpacity, FlatList} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Text, Box} from '../../styles/theme';
 import {ProductsDummy} from '../../components/ProductsDummy';
-import {FlatList} from 'react-native-gesture-handler';
 import Button from '../../components/Button';
 import EditForm from './EditForm';
 import Modal from "../../components/Modal";

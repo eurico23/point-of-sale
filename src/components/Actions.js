@@ -22,10 +22,10 @@ export default function Actions() {
             <Text style={styles.labelButton} >AddNewProduct</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('Expenditure')}> 
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('BuyAndSale')}> 
         <View style={[styles.areaButton, style={backgroundColor: '#FF6854'}]}>
             </View>
-            <Text style={styles.labelButton}>Expenditure</Text>
+            <Text style={styles.labelButton}>BuyAndSale</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('Reports')}> 

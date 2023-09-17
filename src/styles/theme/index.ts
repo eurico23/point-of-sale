@@ -37,6 +37,8 @@ const theme = createTheme({
     mainBackground: palette.white,
     cardPrimaryBackground: palette.blueLightest,
     blue:palette.blueDarkest,
+    blueLight:palette.blueLight,
+    blueLightest:palette.blueLightest,
     highlight:palette.blueDarkest,
     black:palette.black,
     textDefaultColor:palette.greyLight,
@@ -72,15 +74,16 @@ const theme = createTheme({
       fontSize: 64,
       
     },
-
+/*
     textXSmall:{
 
     },
     textSmall:{
       
-    },
-    textMedium:{
-        
+    },*/
+    textDefault:{
+        color:'textDefaultColor',
+        fontSize: 14,
     },
     textLarge:{
       fontWeight: 'bold',
@@ -92,13 +95,13 @@ const theme = createTheme({
       fontSize: 18,
       color:'black',
     },
-
+/*
     headerXSmall:{
 
     },
     headerSmall:{
         
-    },
+    },*/
     headerMedium:{
         fontSize: 18,
         fontWeight: 'bold',

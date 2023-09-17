@@ -14,8 +14,8 @@ const PendingModalContent = ({ toggleModal } ) => {
   return (
     <View>    
           <Text variant="headerLarge">Cuca</Text>
-          <Text variant="textMedium" marginBottom='s'>3 Items</Text>
-          <Text variant="textMedium" marginBottom='l' textAlign='center'>Tem certeza? Será excluído permanentemente</Text>
+          <Text  marginBottom='s'>3 Items</Text>
+          <Text  marginBottom='l' textAlign='center'>Tem certeza? Será excluído permanentemente</Text>
          
           <Box  flexDirection="row" gap="m">
             <Button
