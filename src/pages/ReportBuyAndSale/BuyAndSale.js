@@ -4,7 +4,7 @@ import {StyleSheet, FlatList, ScrollView} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Text, Box} from '../../styles/theme';
 import {ProductsDummy} from '../../components/ProductsDummy';
-
+import Button from '../../components/Button';
 
 const BuyAndSale = () => {
   React.useLayoutEffect(() => {
@@ -32,7 +32,10 @@ const BuyAndSale = () => {
   const navigation = useNavigation();
 
   return (
-    <Box backgroundColor="mainBackground" flex={1}>
+    <Box backgroundColor="mainBackground" flex={1} position='relative' style={{paddingBottom:80}}>
+       <Box style={styles.print}>
+      <AntDesign name="printer" color="#fff" size={30} />
+      </Box>
       <Box
         borderBottomColor="greyLightest"
         borderBottomWidth={1}
@@ -98,6 +101,9 @@ const BuyAndSale = () => {
           </Box>
         </Box>
       </Box>
+      
+        
+     
     </Box>
   );
 };
@@ -111,7 +117,6 @@ const styles = StyleSheet.create({
     gap: 10,
     margin: 5,
     justifyContent: 'center',
-    paddingBottom:50,
   },
   card: {
     flex: 1,
@@ -127,4 +132,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#F8F9FE',
     paddingVertical: 10,
   },
+  print: {
+    position: 'absolute', 
+    bottom: 50, 
+    left: '80%', 
+    width: 50, 
+    height: 50, 
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor: '#006FFD',
+    borderRadius:25,
+    zIndex:20,
+  }
 });

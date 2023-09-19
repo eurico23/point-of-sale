@@ -66,6 +66,13 @@ export default function Actions() {
             </View>
             <Text style={styles.labelButton}>Edit Sales Item</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('ListOfProducts')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Product List</Text>
+        </TouchableOpacity>
+
       </View>
     </View>
 

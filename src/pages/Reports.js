@@ -7,7 +7,7 @@ import {Text, Box} from '../styles/theme';
 
 // Card gap
 const { width } = Dimensions.get('window');
-const gap = 12;
+const gap = 10;
 const itemPerRow = 4;
 const totalGapSize = (itemPerRow - 10) * gap;
 const windowWidth = width;
@@ -40,7 +40,22 @@ const Reports = () => {
           <Text textAlign='center' color="highlight"  fontWeight='bold' marginVertical="xs">
             COMPRAS E VENDAS
           </Text>
+          </Box>
+
+          <Box style={styles.card}>
+          <MaterialIcons name="point-of-sale" color="#006FFD" size={30} />
+          <Text textAlign='center' color="highlight"  fontWeight='bold' marginVertical="xs">
+            CONTROL DE ESTOQUE
+          </Text>
         </Box>
+        <Box style={styles.card}>
+          <MaterialIcons name="point-of-sale" color="#006FFD" size={30} />
+          <Text textAlign='center' color="highlight"  fontWeight='bold' marginVertical="xs">
+            PRODUCTO BAIXO ESTOQUE
+          </Text>
+        </Box>
+
+
       </Box>
 
     </Box>

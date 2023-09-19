@@ -13,6 +13,8 @@ import NewSale from '../pages/NewSale/NewSale';
 import EditSale from '../pages/EditSale/EditSale';
 import PaymentConfirmation from '../pages/Payment/PaymentConfirmation';
 import BuyAndSale from '../pages/ReportBuyAndSale/BuyAndSale';
+import ListOfProducts from '../pages/Products/ListOfProducts';
+
 const Stack = createStackNavigator();
 
 const StackNavigator = () => {
@@ -29,6 +31,7 @@ const StackNavigator = () => {
             <Stack.Screen name="EditSale" component={EditSale} />
             <Stack.Screen name="PaymentConfirmation" component={PaymentConfirmation} />
             <Stack.Screen name="BuyAndSale" component={BuyAndSale} />
+            <Stack.Screen name="ListOfProducts" component={ListOfProducts} />
           </Stack.Navigator>
       </NavigationContainer>
   );

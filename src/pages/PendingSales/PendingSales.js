@@ -73,7 +73,7 @@ const PendingSales = () => {
             </View>
             </TouchableOpacity>
           </View>
-          <Text variant='textMedium' color='highlight' textAlign='center' marginBottom='m'>Vendas Pendentes: 3</Text>
+          <Text variant='textDefault' color='highlight' textAlign='center' marginBottom='m'>Vendas Pendentes: 3</Text>
         
           {openTables.map((item) => (
           <OpenTables key={item.id} data={item} />
