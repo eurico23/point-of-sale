@@ -14,6 +14,9 @@ import EditSale from '../pages/EditSale/EditSale';
 import PaymentConfirmation from '../pages/Payment/PaymentConfirmation';
 import BuyAndSale from '../pages/ReportBuyAndSale/BuyAndSale';
 import ListOfProducts from '../pages/Products/ListOfProducts';
+import InfoStock from '../pages/InfoStock/InfoStock';
+import OverallBalance from '../pages/OverallBalance/OverallBalance';
+
 
 const Stack = createStackNavigator();
 
@@ -32,6 +35,9 @@ const StackNavigator = () => {
             <Stack.Screen name="PaymentConfirmation" component={PaymentConfirmation} />
             <Stack.Screen name="BuyAndSale" component={BuyAndSale} />
             <Stack.Screen name="ListOfProducts" component={ListOfProducts} />
+            <Stack.Screen name="InfoStock" component={InfoStock} />
+            <Stack.Screen options={{ title: 'Balanço Geral' }} name="OverallBalance" component={OverallBalance} />
+            
           </Stack.Navigator>
       </NavigationContainer>
   );

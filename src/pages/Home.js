@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View, ScrollView, SafeAreaView, StatusBar } from 'react-native';
+import { StyleSheet, View, ScrollView, SafeAreaView, StatusBar } from 'react-native';
+import {Text} from '../styles/theme';
 import Header from '../components/Header';
 import Balance from '../components/Balance';
 import Movements from '../components/Movements';
@@ -80,6 +81,7 @@ const list = [
   },
 ];
 
+
 export default function Home ({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
@@ -92,7 +94,10 @@ export default function Home ({ navigation }) {
 
         <Actions navigation={navigation} />
 
-        <Balance saldo="100.000" gastos="25.000" />
+        <View style={styles.title}>
+          <Text textAlign='center' color="textDefaultColor">Janeiro 2023</Text>
+        </View>
+        <Balance title="Balanço Atual" subTitle="" totalPrice="100.000,00 kz" leftSubtitle ="Gastos" leftValue="100.000" righttSubtitle ="Gastos" rightValue="25.000" />
 
         <Text style={styles.title}>5 Mais Vendidos</Text>
 

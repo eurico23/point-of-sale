@@ -1,107 +1,110 @@
-import React from "react";
-import { StyleSheet, View } from 'react-native';
+import React from 'react';
+import {StyleSheet, View} from 'react-native';
 import {Text, Box} from '../styles/theme';
 
-
-export default function Balance({saldo, gastos}) {
+export default function Balance({
+  title,
+  subTitle,
+  totalPrice,
+  leftSubtitle,
+  leftValue,
+  righttSubtitle,
+  rightValue,
+}) {
   return (
     <View style={styles.container}>
-       <View style={styles.title}>
-            <Text color="textDefaultColor" >Janeiro 2023</Text>
-       </View>
 
 
-       <View style={styles.content}>
-                <Text style={styles.subtitle}>Balanço Atual</Text>
-                <Text style={styles.baseText}>
-                    100.000,00
-                    <Text style={styles.currency}> Kz</Text>
-                </Text>
-        
-       <View style={styles.contentbalanco}>
-            <View style={styles.item}>
-                <Text style={styles.itemTitle}>Gastos</Text>
-                <Text style={styles.green}>{saldo}
-                    <Text style={styles.itemcurrency}> Kz</Text>
-                </Text>
-            </View>
+      <View style={styles.content}>
+        <Text style={styles.subtitle}>{title}</Text>
+        <Text style={styles.baseText}>
+          {totalPrice}
+        </Text>
+        {/* <Text style={styles.itemTitle}>{subTitle}</Text> */}
+        <View style={styles.contentbalanco}>
+        <Box justifyContent='center' style={styles.item}>
+            <Text textAlign='center'>{leftSubtitle}</Text>
+            <Text textAlign='center' style={styles.red}>
+              {leftValue}
+              <Text style={styles.itemcurrency}> Kz</Text>
+            </Text>
+          </Box>
 
-            <View style={styles.item}>
-                <Text style={styles.itemTitle}>Vendas</Text>
-                <View>
-                    <Text style={styles.red}>{gastos}
-                        <Text style={styles.itemcurrency}> Kz</Text>
-                    </Text>
-                </View>
-            </View>
+          <Box justifyContent='center' style={styles.item}>
+            <Text textAlign='center'>{righttSubtitle}</Text>
+              <Text textAlign='center' style={styles.green}>
+                {rightValue}
+                <Text style={styles.itemcurrency}> Kz</Text>
+              </Text>
+          </Box>
         </View>
-
-
       </View>
     </View>
-    
   );
 }
 
 const styles = StyleSheet.create({
-    container:{
-        marginBottom:15,
-    },
+  container: {
+    marginBottom: 15,
+  },
   content: {
     alignItems: 'center',
-    backgroundColor:'#1F6CFF',
-    paddingTop:16,
+    backgroundColor: '#1F6CFF',
+    paddingTop: 16,
     marginStart: 14,
     marginEnd: 14,
     borderRadius: 8,
   },
 
-  title:{
+  title: {
     alignItems: 'center',
     marginBottom: 20,
-    fontSize:16,
-    },
+    fontSize: 16,
+  },
 
-    subtitle:{
-        fontSize:14,
-        color:'#AECAFF',
-    },
-    baseText:{
-        color:'#fff',
-        fontSize:18,
-        fontWeight:"bold",
-    },
-    currency:{
-        color:'#AECAFF',
-        fontSize:14,
-    },
+  subtitle: {
+    fontSize: 14,
+    color: '#AECAFF',
+  },
+  baseText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  currency: {
+    color: '#AECAFF',
+    fontSize: 14,
+  },
 
-  contentbalanco:{
-    columnGap:10,
+  contentbalanco: {
     flexDirection: 'row',
-    padding:16,
+    gap: 10,
+    margin: 5,
+    justifyContent: 'center',
+    padding: 16,
+  
   },
 
-  item:{
-    backgroundColor:'#fff',
+  item: {
+    flex: 1,
+    backgroundColor: '#fff',
     borderRadius: 8,
-    padding:10,
-    minWidth:160,
+    padding: 10,
+    minWidth: 160,
     alignItems: 'center',
+    textAlign:'center',
   },
-  itemcurrency:{
-    color:'#BDB8B8',
-    fontSize:12,
-    fontWeight:"normal",
+  itemcurrency: {
+    color: '#BDB8B8',
+    fontSize: 12,
+    fontWeight: 'normal',
   },
   green: {
-    color:'#17D85C',
-    fontWeight:"bold",
+    color: '#17D85C',
+    fontWeight: 'bold',
   },
   red: {
-    color:'red',
-    fontWeight:"bold",
-  }
-
-
+    color: 'red',
+    fontWeight: 'bold',
+  },
 });

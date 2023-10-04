@@ -1,5 +1,6 @@
 import React from 'react';
-import {StyleSheet, Dimensions} from 'react-native';
+import { useNavigation } from "@react-navigation/native";
+import {StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {Text, Box} from '../styles/theme';
@@ -14,6 +15,7 @@ const windowWidth = width;
 const childWidth = (windowWidth - totalGapSize) / itemPerRow;
 
 const Reports = () => {
+  const navigation = useNavigation();
   return (
     <Box backgroundColor="mainBackground" flex={1} paddingHorizontal="s">
       <Box style={styles.cardContainer}>
@@ -54,8 +56,20 @@ const Reports = () => {
             PRODUCTO BAIXO ESTOQUE
           </Text>
         </Box>
-
-
+        <Box style={styles.card}>
+          <AntDesign name="codepen" color="#006FFD" size={30} />
+          <Text textAlign='center' color="highlight"  fontWeight='bold' marginVertical="xs">
+            INFO ESTOQUE
+          </Text>
+        </Box>
+        <TouchableOpacity  onPress={() => navigation.navigate('OverallBalance')} >
+          <Box style={styles.card}>
+            <AntDesign name="codepen" color="#006FFD" size={30} />
+            <Text textAlign='center' color="highlight"  fontWeight='bold' marginVertical="xs">
+            BALANÇO GERAL
+            </Text>
+          </Box>
+        </TouchableOpacity>
       </Box>
 
     </Box>

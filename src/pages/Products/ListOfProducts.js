@@ -70,7 +70,7 @@ const ListOfProducts = () => {
                   <Box>
                     <Text textAlign='right'> {item.quantity} em estoque</Text>
                     <Text textAlign='right'>
-                      Data Expiracao: 02/10/2024
+                      Data Expiração: 02/10/2024
                     </Text>
                   </Box>
                 </Box>
