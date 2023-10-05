@@ -3,7 +3,7 @@ import React from 'react';
 import {StyleSheet, FlatList, ScrollView} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Text, Box} from '../../styles/theme';
-import {ProductsDummy} from '../../components/ProductsDummy';
+import {ProductsDummy} from '../../data/ProductsDummy';
 import Button from '../../components/Button';
 
 const BuyAndSale = () => {

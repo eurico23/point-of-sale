@@ -4,7 +4,7 @@ import Balance from '../../components/Balance';
 
 const InfoStock = () => {
   return (
-    <Box backgroundColor="mainBackground" flex={1}>
+    <Box backgroundColor="mainBackground" flex={1} justifyContent='center'>
       <Balance
         title="Numero De produtos"
         subTitle=""

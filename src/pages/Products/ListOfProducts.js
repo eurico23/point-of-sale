@@ -2,7 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {StyleSheet, FlatList, TouchableOpacity} from 'react-native';
 import {Text, Box} from '../../styles/theme';
-import {ProductsDummy} from '../../components/ProductsDummy';
+import {ProductsDummy} from '../../data/ProductsDummy';
 import Card from '../../components/Card';
 import SearchBar from '../../components/SearchBar';
 import Button from '../../components/Button';

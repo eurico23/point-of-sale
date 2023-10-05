@@ -22,7 +22,7 @@ const openTables = [
     tableItems: [
       { product: 'Hansaplast Spray Limpeza Feridas 100ml', price: 250, quantity: 99 },
       { product: 'Strepfen Mel Limao Spray 16,2mg/Ml Sol Pulv Bucal 15ml', price: 250, quantity: 5 },
-      { product: 'Juice', price: 250, quantity: 5 },
+      { product: 'Juice', price: 250.00, quantity: 5 },
     ],
   },
   {

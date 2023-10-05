@@ -77,10 +77,11 @@ const theme = createTheme({
 /*
     textXSmall:{
 
-    },
-    textSmall:{
-      
     },*/
+    textSmall:{
+      color:'textDefaultColor',
+      fontSize: 12,
+    },
     textDefault:{
         color:'textDefaultColor',
         fontSize: 14,

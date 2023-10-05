@@ -5,7 +5,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Text, Box} from '../../styles/theme';
 import Categories from '../../components/Categories';
-import {ProductsDummy} from '../../components/ProductsDummy';
+import {ProductsDummy} from '../../data/ProductsDummy';
 import {FlatList} from 'react-native-gesture-handler';
 import Button from '../../components/Button';
 

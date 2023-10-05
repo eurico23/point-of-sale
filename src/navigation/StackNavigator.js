@@ -16,6 +16,12 @@ import BuyAndSale from '../pages/ReportBuyAndSale/BuyAndSale';
 import ListOfProducts from '../pages/Products/ListOfProducts';
 import InfoStock from '../pages/InfoStock/InfoStock';
 import OverallBalance from '../pages/OverallBalance/OverallBalance';
+import CashierClosing from '../pages/CashierClosing/CashierClosing';
+import SalesHistory from '../pages/SalesHistory/SalesHistory';
+
+
+
+
 
 
 const Stack = createStackNavigator();
@@ -36,7 +42,9 @@ const StackNavigator = () => {
             <Stack.Screen name="BuyAndSale" component={BuyAndSale} />
             <Stack.Screen name="ListOfProducts" component={ListOfProducts} />
             <Stack.Screen name="InfoStock" component={InfoStock} />
+            <Stack.Screen options={{ title: 'Fecho de Caixa' }} name="CashierClosing" component={CashierClosing} />
             <Stack.Screen options={{ title: 'Balanço Geral' }} name="OverallBalance" component={OverallBalance} />
+            <Stack.Screen options={{ title: 'Vendas Realizadas' }} name="SalesHistory" component={SalesHistory} />
             
           </Stack.Navigator>
       </NavigationContainer>

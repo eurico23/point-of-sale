@@ -4,7 +4,7 @@ import {View, StyleSheet, Pressable, TouchableOpacity, FlatList} from 'react-nat
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Text, Box} from '../../styles/theme';
-import {ProductsDummy} from '../../components/ProductsDummy';
+import {ProductsDummy} from '../../data/ProductsDummy';
 import Button from '../../components/Button';
 import EditForm from './EditForm';
 import Modal from "../../components/Modal";

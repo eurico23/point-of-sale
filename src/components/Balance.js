@@ -20,7 +20,7 @@ export default function Balance({
         <Text style={styles.baseText}>
           {totalPrice}
         </Text>
-        {/* <Text style={styles.itemTitle}>{subTitle}</Text> */}
+        <Text color='blueLight'>{subTitle}</Text>
         <View style={styles.contentbalanco}>
         <Box justifyContent='center' style={styles.item}>
             <Text textAlign='center'>{leftSubtitle}</Text>
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#1F6CFF',
     paddingTop: 16,
-    marginStart: 14,
-    marginEnd: 14,
+    marginStart: 10,
+    marginEnd: 10,
     borderRadius: 8,
   },
 
@@ -78,8 +78,7 @@ const styles = StyleSheet.create({
 
   contentbalanco: {
     flexDirection: 'row',
-    gap: 10,
-    margin: 5,
+    gap: 14,
     justifyContent: 'center',
     padding: 16,
   

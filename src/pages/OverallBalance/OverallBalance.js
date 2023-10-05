@@ -7,9 +7,9 @@ import CheckBox from '@react-native-community/checkbox';
 
 // Card gap
 const {width} = Dimensions.get('window');
-const gap = 10;
+const gap = 8;
 const itemPerRow = 3;
-const totalGapSize = (itemPerRow - 15) * gap;
+const totalGapSize = (itemPerRow - 18) * gap;
 const windowWidth = width;
 const childWidth = (windowWidth - totalGapSize) / itemPerRow;
 
