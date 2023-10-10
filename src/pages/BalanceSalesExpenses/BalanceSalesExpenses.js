@@ -13,7 +13,7 @@ const totalGapSize = (itemPerRow - 18) * gap;
 const windowWidth = width;
 const childWidth = (windowWidth - totalGapSize) / itemPerRow;
 
-const OverallBalance = () => {
+const BalanceSalesExpenses = () => {
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
   const [toggleCheckBox1, setToggleCheckBox1] = useState(false);
   const [toggleCheckBox2, setToggleCheckBox2] = useState(false);
@@ -149,7 +149,7 @@ const OverallBalance = () => {
   );
 };
 
-export default OverallBalance;
+export default BalanceSalesExpenses;
 
 const styles = StyleSheet.create({
   cardContainer: {
