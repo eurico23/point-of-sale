@@ -11,6 +11,17 @@ export default function Balance({
   righttSubtitle,
   rightValue,
 }) {
+
+
+  /* card icon or text value
+  let subTitleProps;
+    if (subTitle !== undefined) {
+      textOrIcon = <IconComponent  name={icon} color="#006FFD" size={30} />;
+    } else {
+      textOrIcon = <Text color='black' fontWeight='bold'>{value}</Text>;
+    }
+*/
+
   return (
     <View style={styles.container}>
 
@@ -20,13 +31,19 @@ export default function Balance({
         <Text style={styles.baseText}>
           {totalPrice}
         </Text>
-        <Text color='blueLight'>{subTitle}</Text>
+
+        {/* Ternary Operator render component only if props {subTitle} has value */}
+        {subTitle ?  <Text color='blueLight'>{subTitle}</Text>  : ""}
+
+        {/* Ternary Operator render component only if props {leftSubtitle} has value */}
+        {leftSubtitle ? (
+        
         <View style={styles.contentbalanco}>
         <Box justifyContent='center' style={styles.item}>
             <Text textAlign='center'>{leftSubtitle}</Text>
             <Text textAlign='center' style={styles.red}>
               {leftValue}
-              <Text style={styles.itemcurrency}> Kz</Text>
+              <Text style={styles.itemcurrency}></Text>
             </Text>
           </Box>
 
@@ -34,10 +51,17 @@ export default function Balance({
             <Text textAlign='center'>{righttSubtitle}</Text>
               <Text textAlign='center' style={styles.green}>
                 {rightValue}
-                <Text style={styles.itemcurrency}> Kz</Text>
+                <Text style={styles.itemcurrency}></Text>
               </Text>
           </Box>
-        </View>
+      </View> 
+         
+          ): ""
+        }
+
+
+
+        
       </View>
     </View>
   );
@@ -50,7 +74,7 @@ const styles = StyleSheet.create({
   content: {
     alignItems: 'center',
     backgroundColor: '#1F6CFF',
-    paddingTop: 16,
+    paddingVertical: 16,
     marginStart: 10,
     marginEnd: 10,
     borderRadius: 8,
@@ -80,7 +104,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 14,
     justifyContent: 'center',
-    padding: 16,
+    paddingHorizontal: 16,
+    paddingTop:16,
   
   },
 

@@ -79,6 +79,34 @@ export default function Actions() {
             <Text style={styles.labelButton}>Estoque info</Text>
         </TouchableOpacity>
 
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('ExpensesList')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Listar despesas</Text>
+        </TouchableOpacity>
+
+
+
+
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('Category')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Categoria</Text>
+        </TouchableOpacity>
+
+
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('ExpenseByCategory')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Despesas por categoria</Text>
+        </TouchableOpacity>
+
+
+   
+
+
+
+
       </View>
     </View>
 

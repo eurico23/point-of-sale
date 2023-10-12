@@ -1,10 +1,10 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet, FlatList, ScrollView} from 'react-native';
+import {StyleSheet, FlatList} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Text, Box} from '../../styles/theme';
 import {ProductsDummy} from '../../data/ProductsDummy';
-import Button from '../../components/Button';
+import Calendar from '../../components/Calendar';
 
 const BuyAndSale = () => {
   React.useLayoutEffect(() => {
@@ -25,7 +25,7 @@ const BuyAndSale = () => {
       headerTitleAlign: 'left',
       headerStyle: {
         borderBottomColor: '#D4D6DD',
-        borderBottomWidth: 1,
+        borderBottomWidth: 0,
       },
     });
   }, [navigation]);
@@ -36,21 +36,7 @@ const BuyAndSale = () => {
        <Box style={styles.print}>
       <AntDesign name="printer" color="#fff" size={30} />
       </Box>
-      <Box
-        borderBottomColor="greyLightest"
-        borderBottomWidth={1}
-        paddingBottom="s"
-        alignContent="space-between"
-        alignItems="center"
-        justifyContent="center"
-        flexDirection="row"
-        gap="s"
-        marginTop="s">
-        <AntDesign name="arrowleft" color="#000" size={30} />
-        <AntDesign name="calendar" color="#000" size={30} />
-        <Text variant="textLarge">09 Set 2023 - 10 Set 2023</Text>
-        <AntDesign name="arrowright" color="#000" size={30} />
-      </Box>
+      <Calendar />
 
       <Box style={styles.containerCard}>
         <Box style={styles.card}>

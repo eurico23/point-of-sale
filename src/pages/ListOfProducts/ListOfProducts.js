@@ -86,7 +86,7 @@ const ListOfProducts = () => {
                     <Box key={index} style={[styles.row, styles.rowBorder]}>
                       <Box flex={1} flexDirection='row' justifyContent='space-between'>
                         <Box>
-                          <Text>Entrada</Text>
+                          <Text>Entrada </Text>
                           <Text fontWeight="bold" >
                           {entry.datecreated}
                           </Text>

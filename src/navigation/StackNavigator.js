@@ -20,12 +20,14 @@ import CashierClosing from '../pages/CashierClosing/CashierClosing';
 import SalesHistory from '../pages/SalesHistory/SalesHistory';
 import ProductsLandingPage from '../pages/ProductsLandingPage/ProductsLandingPage';
 import SalesLandingPage from '../pages/SalesLandingPage/SalesLandingPage';
-import ExpensesLandingPage from '../pages/ExpensesLandingPage/ExpensesLandingPage';
+import ExpensesLandingPage from '../pages/Expenses/ExpensesLandingPage';
 import DevedoresLandingPage from '../pages/DevedoresLandingPage/DevedoresLandingPage';
 import NewProduct from '../pages/NewProduct/NewProduct';
 import BalanceSalesExpenses from '../pages/BalanceSalesExpenses/BalanceSalesExpenses';
 import BalanceLandingPage from '../pages/BalanceLandingPage/BalanceLandingPage';
-
+import ExpensesList from '../pages/Expenses/ExpensesList';
+import Category from '../pages/Expenses/Category';
+import ExpenseByCategory from '../pages/Expenses/ExpenseByCategory';
 
 
 const Stack = createStackNavigator();
@@ -56,7 +58,11 @@ const StackNavigator = () => {
             <Stack.Screen options={{ title: 'Novo Produto' }} name="NewProduct" component={NewProduct} />
             <Stack.Screen options={{ title: 'BalanceSalesExpenses' }} name="BalanceSalesExpenses" component={BalanceSalesExpenses} />
             <Stack.Screen options={{ title: 'BalanceLandingPage' }} name="BalanceLandingPage" component={BalanceLandingPage} />
+            <Stack.Screen options={{ title: 'Lista das despesas' }} name="ExpensesList" component={ExpensesList} />
+            <Stack.Screen options={{ title: 'Categorias' }} name="Category" component={Category} />
+            <Stack.Screen options={{ title: 'Despesas por categoria' }} name="ExpenseByCategory" component={ExpenseByCategory} />
             
+
           </Stack.Navigator>
       </NavigationContainer>
   );
