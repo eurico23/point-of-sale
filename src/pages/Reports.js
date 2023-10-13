@@ -16,7 +16,7 @@ const Reports = () => {
         <GridCard iconType="MaterialCommunityIcons"  icon='cash' link='SalesLandingPage' title='VENDAS' />
         <GridCard iconType="MaterialCommunityIcons" icon='cash-refund' link='ExpensesLandingPage'  title='DESPESAS' />
 
-        <GridCard iconType="FontAwesome6" icon='arrows-down-to-people' link='NewProduct'  title='DEVEDORES' />
+        <GridCard iconType="FontAwesome6" icon='arrows-down-to-people' link='DevedoresList'  title='DEVEDORES' />
        
       </Box>
     </Box>

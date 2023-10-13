@@ -18,16 +18,19 @@ import InfoStock from '../pages/InfoStock/InfoStock';
 import OverallBalance from '../pages/BalanceLandingPage/BalanceLandingPage';
 import CashierClosing from '../pages/CashierClosing/CashierClosing';
 import SalesHistory from '../pages/SalesHistory/SalesHistory';
-import ProductsLandingPage from '../pages/ProductsLandingPage/ProductsLandingPage';
+import ProductsLandingPage from '../pages/Products/ProductsLandingPage';
 import SalesLandingPage from '../pages/SalesLandingPage/SalesLandingPage';
 import ExpensesLandingPage from '../pages/Expenses/ExpensesLandingPage';
-import DevedoresLandingPage from '../pages/DevedoresLandingPage/DevedoresLandingPage';
+import DevedoresLandingPage from '../pages/Devedores/DevedoresList';
 import NewProduct from '../pages/NewProduct/NewProduct';
 import BalanceSalesExpenses from '../pages/BalanceSalesExpenses/BalanceSalesExpenses';
 import BalanceLandingPage from '../pages/BalanceLandingPage/BalanceLandingPage';
 import ExpensesList from '../pages/Expenses/ExpensesList';
 import Category from '../pages/Expenses/Category';
 import ExpenseByCategory from '../pages/Expenses/ExpenseByCategory';
+import DevedoresList from '../pages/Devedores/DevedoresList';
+import LowStockProducts from '../pages/Products/LowStockProducts';
+import ExpiredProducts from '../pages/Products/ExpiredProducts';
 
 
 const Stack = createStackNavigator();
@@ -61,6 +64,10 @@ const StackNavigator = () => {
             <Stack.Screen options={{ title: 'Lista das despesas' }} name="ExpensesList" component={ExpensesList} />
             <Stack.Screen options={{ title: 'Categorias' }} name="Category" component={Category} />
             <Stack.Screen options={{ title: 'Despesas por categoria' }} name="ExpenseByCategory" component={ExpenseByCategory} />
+            <Stack.Screen options={{ title: 'Devedores' }} name="DevedoresList" component={DevedoresList} />
+            <Stack.Screen options={{ title: 'Produtos de estoque baixo' }} name="LowStockProducts" component={LowStockProducts} />
+            <Stack.Screen options={{ title: 'Produtos Expirados' }} name="ExpiredProducts" component={ExpiredProducts} />
+
             
 
           </Stack.Navigator>

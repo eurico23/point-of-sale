@@ -12,9 +12,9 @@ const ProductsLandingPage = () => {
       <Box style={styles.gridContainer}>
         <GridCard link={'OverallBalance'} icon={'CodeSandbox'} title={'NOVO PRODUTO'} />
         <GridCard link={'OverallBalance'} value={500} title={'LISTAR PRODUTOS'} />
-        <GridCard link={'OverallBalance'} value={500} title={'PRODUTOS ESTOQUE BAIXO'} />
+        <GridCard link={'LowStockProducts'} value={500} title={'PRODUTOS ESTOQUE BAIXO'} />
         <GridCard link={'OverallBalance'} value={500} title={'PRODUTOS SEM ESTOQUE'} />
-        <GridCard link={'OverallBalance'} value={500} title={'PRODUTOS EXPIRADOS'} />
+        <GridCard link={'ExpiredProducts'} value={500} title={'PRODUTOS EXPIRADOS'} />
 
       </Box>
     </Box>

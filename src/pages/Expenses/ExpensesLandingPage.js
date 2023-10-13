@@ -13,7 +13,7 @@ const ExpensesLandingPage = () => {
         <GridCard link={'OverallBalance'} icon={'CodeSandbox'} title={'NOVA DESPESA'} />
         <GridCard link={'ExpensesList'}  icon={'CodeSandbox'} title={'LISTAR DESPESA'} />
         <GridCard link={'Category'}  icon={'CodeSandbox'} title={'CATEGORIA DE DESPESAS'} />
-        <GridCard link={'OverallBalance'}  icon={'CodeSandbox'} title={'DESPESAS POR CATEGORIA '} />
+        <GridCard link={'ExpenseByCategory'}  icon={'CodeSandbox'} title={'DESPESAS POR CATEGORIA '} />
       </Box>
     </Box>
   );

@@ -100,11 +100,25 @@ export default function Actions() {
             </View>
             <Text style={styles.labelButton}>Despesas por categoria</Text>
         </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('DevedoresList')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Devedores</Text>
+        </TouchableOpacity>
 
-
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('LowStockProducts')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Estoque baixo</Text>
+        </TouchableOpacity>
    
-
-
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('ExpiredProducts')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Produtos Expirados</Text>
+        </TouchableOpacity>
+        
 
 
       </View>
