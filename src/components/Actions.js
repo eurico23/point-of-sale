@@ -19,7 +19,7 @@ export default function Actions() {
         <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('AddNewProduct')}> 
             <View style={[styles.areaButton, style={backgroundColor: '#8674F5'}]}>
             </View>
-            <Text style={styles.labelButton} >AddNewProduct</Text>
+            <Text style={styles.labelButton} >AddNewProduct v1</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('BuyAndSale')}> 
@@ -53,10 +53,10 @@ export default function Actions() {
             
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('AddNewProduct')}> 
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('NewProduct')}> 
             <View style={[styles.areaButton, style={backgroundColor: '#8674F5'}]}>
             </View>
-            <Text style={styles.labelButton} >Add New product</Text>
+            <Text style={styles.labelButton} >New product</Text>
         </TouchableOpacity>
         
 

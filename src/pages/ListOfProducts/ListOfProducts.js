@@ -51,67 +51,36 @@ const ListOfProducts = () => {
           return (
             <Card>
               <TouchableOpacity onPress={() => setOpenItem(isItemOpen ? null : item.id)}>
-              <Box flexDirection="row" gap="m" justifyContent='space-between'>
-                <Box style={{ width: 0,
-        flexGrow: 1,
-        flex: 3,}}>
-                  <Text   fontWeight="bold" color="black">
-                    {item.productname}
-                  </Text>
-                  <Text>3 Entradas </Text>
-                  
-                  
-                </Box>
+              <Box>
+                <Box>
+                  <Text color="highlight" fontWeight='bold'>{item.productname}</Text>
 
-                <Box flex={1} flexDirection='column' justifyContent='space-between'>
-                <Text variant="textLarge" color="highlight" textAlign="right">
-                    {item.price} Kz
-                  </Text>
-                  <Box>
-                    <Text textAlign='right'> {item.quantity} em estoque</Text>
-                    <Text textAlign='right'>
-                      Data Expiração: 02/10/2024
-                    </Text>
-                  </Box>
+                <Box flex={1} flexDirection='row' justifyContent='space-between'>
+                <Box>
+                  <Text  color="textDefaultColor">Data de expiração</Text>
+                  <Text fontWeight='bold' color="textDefaultColor">02/10/2024</Text>
                 </Box>
+                <Box>
+                <Text  color="textDefaultColor">Estoque</Text>
+                <Text fontWeight='bold' color="textDefaultColor">{item.quantity} {item.sale_mode}</Text>
                 </Box>
+                
+                <Box>
+                <Text textAlign='right' color="textDefaultColor">Preço</Text>
+                <Text fontWeight='bold' color="textDefaultColor">{item.price} kz</Text>
+                </Box>
+              </Box>
+                </Box>
+            </Box>
               </TouchableOpacity>
               {isItemOpen && (
-                <Box
-                  borderColor="greyLightest"
-                  borderTopWidth={1}
-                  paddingTop="s"
-                  marginTop="m">
-                  {item.newentry.map((entry, index) => (
-                    <Box key={index} style={[styles.row, styles.rowBorder]}>
-                      <Box flex={1} flexDirection='row' justifyContent='space-between'>
-                        <Box>
-                          <Text>Entrada </Text>
-                          <Text fontWeight="bold" >
-                          {entry.datecreated}
-                          </Text>
-                        </Box>
-
-                        <Box >
-                          <Text  textAlign="right" color="highlight" fontWeight="bold">{entry.price} Kz</Text>
-                          <Text textAlign="right">
-                          {entry.quantity} em estoque
-                          </Text>
-                        </Box>
-                      </Box>
-                    </Box>
-                  
-                  ))}
-            
-            <Box flexDirection="row" gap="m">
-            <Button
-              title="APAGAR"
-              variant="buttonWarning"
-            />      
-            <Button title="EDITAR" variant="defaults" />
-          </Box>
-           
-                </Box>
+                 <Box flexDirection="row" gap="m" marginTop='m'>
+                 <Button
+                   title="APAGAR"
+                   variant="buttonWarning"
+                 />      
+                 <Button title="EDITAR" variant="defaults" />
+               </Box>
               )}
             </Card>
           );

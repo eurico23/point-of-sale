@@ -5,6 +5,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med1.png'),
       productname: 'First Hansaplast Spray Limpeza Feridas 100ml',
       price: 150.00,
+      sale_mode: 'Unidade',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -17,6 +18,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med2.png'),
       productname: 'Hansaplast Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml',
       price: 200.00,
+      sale_mode: 'Kg',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -30,6 +32,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med3.png'),
       productname: 'Coke Cola',
       price: 50.00,
+      sale_mode: 'Unidade',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -43,6 +46,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med1.png'),
       productname: 'Coke Cola',
       price: 60.00,
+      sale_mode: 'Unidade',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -56,6 +60,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med2.png'),
       productname: 'Coke Cola',
       price: 250.00,
+      sale_mode: 'Kg',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -69,6 +74,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med3.png'),
       productname: 'Coke Cola',
       price: 300.00,
+      sale_mode: 'Kg',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -82,6 +88,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med1.png'),
       productname: 'Hansaplast Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml',
       price: 150.00,
+      sale_mode: 'Kg',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -95,6 +102,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med2.png'),
       productname: 'Coke Cola',
       price: 200.00,
+      sale_mode: 'Kg',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -108,6 +116,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med3.png'),
       productname: 'Coke Cola',
       price: 50.00,
+      sale_mode: 'Litro',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -121,6 +130,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med1.png'),
       productname: 'Coke Cola',
       price: 60.00,
+      sale_mode: 'Litro',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -134,6 +144,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med2.png'),
       productname: 'Coke Cola',
       price: 250.00,
+      sale_mode: 'Litro',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -147,6 +158,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med3.png'),
       productname: 'Coke Cola',
       price: 300.00,
+      sale_mode: 'Litro',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -160,6 +172,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med1.png'),
       productname: 'Hansaplast Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml Spray Limpeza Feridas 100ml Hansaplast Spray Limpeza Feridas 100ml',
       price: 150.00,
+      sale_mode: 'Litro',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
@@ -173,6 +186,7 @@ export const ProductsDummy = [
       image: require('../assets/images/med2.png'),
       productname: 'Coke Cola',
       price: 200.00,
+      sale_mode: 'Litro',
       quantity: 10,
       newentry: [
         {datecreated: '17/09/2023', quantity: 10, price: 250, quantity: 99 },
