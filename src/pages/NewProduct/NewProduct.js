@@ -1,16 +1,36 @@
 
 import React, { useState } from 'react';
-import {StyleSheet, TextInput, Button, Pressable, Platform} from 'react-native';
+import {StyleSheet, TextInput, Pressable, Platform, TouchableOpacity, ScrollView} from 'react-native';
 import {Text, Box} from '../../styles/theme';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import { SelectList } from 'react-native-dropdown-select-list';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Button from '../../components/Button';
+import { CategoryData } from '../../data/CategoryData';
+import { UnidadeCompra } from '../../data/UnidadeCompra';
+
+
 
 const NewProduct  = () => {
   const [date, setDate] = useState(new Date());
   const [showPicker, setShowPicker] = useState(false);
-  const [dateOfBirth, setDateOfBirth] = useState ("");
+  const [selected, setSelected] = React.useState("");
+
+  const [productName, setProductName] = useState ("");
+  const [productCategory, setProductCategory] = useState ("");
+  const [purchaseUnity, setPurchaseUnity] = useState ("");
+  const [productQuantity, setProductQuantity] = useState ("");
+  const [productCost, setProductCost] = useState ("");
+  const [productTotalCost, setProductTotalCost] = useState ("");
+  const [productTotalCostEdit, setProductTotalCostEdit] = useState ("");
+  const [productSellUnity, setProductSellUnity] = useState ("");
+  const [productPrice, setProductPrice] = useState ("");
+  const [expiryDate, setExpiryDate] = useState ("");
+  //const [productImage, setexpiryDate] = useState ("");
+
+
 
   const toggleDatePicker = () => {
-    console.log("inside toggleDatePicker before");
     setShowPicker(!showPicker);
   };
 
@@ -18,24 +38,25 @@ const NewProduct  = () => {
     if (type == "set") {
       const currentdate = selectedDate;
       setDate(currentdate);
+      
 
       if (Platform.OS === "android"){
         toggleDatePicker();
-        setDateOfBirth(formatDate(currentdate));
+        setExpiryDate(formatDate(currentdate));
       }
     } else {
-     // toggleDatePicker();
+      toggleDatePicker();
     }
   };
 
 
   const clearDate = () => {
-    setDateOfBirth(""); // Set the date to an empty string to clear it
+    setExpiryDate(""); // Set the date to an empty string to clear it
   };
 
     // for IOS
   const confirmIOSDate = () => {
-    setDateOfBirth(formatDate(currentdate));
+    setExpiryDate(formatDate(currentdate));
     toggleDatePicker();
   };
 
@@ -54,72 +75,166 @@ const NewProduct  = () => {
     return `${formattedDay}/${formattedMonth}/${year}`;
   };
 
+  function handleAddProduct(){
+    const data = {
+
+      productName,
+      productCategory, 
+      purchaseUnity, 
+      productQuantity, 
+      productCost, 
+      productTotalCost,
+      productTotalCostEdit, 
+      productSellUnity, 
+      productPrice, 
+      expiryDate, 
+    }
+    console.log(data);
+  }
+
 
   return (
-    <Box backgroundColor="mainBackground" flex={1} paddingHorizontal="s">
+    <ScrollView>
+    <Box backgroundColor="mainBackground" flex={1} paddingHorizontal="s" paddingBottom='l'>
 
 
       <Box>
         <Text color="black" fontWeight="bold" marginBottom="xs">Nome do Produto *</Text>
-        <TextInput style={styles.textInput} ></TextInput>
+        <TextInput onChangeText={setProductName} style={styles.textInput} placeholder="Nome do Produto"></TextInput>
+      </Box>
+
+      <Box>
+        <Text color="black" fontWeight="bold" marginBottom="xs">Categoria</Text>
+        <SelectList onChangeText={setProductCategory}  search={false}  placeholder='Selecione Categoria' boxStyles={styles.textInput} inputStyles={{fontSize:12, marginLeft:-15,}}  setSelected={(val) => setSelected(val)} data={CategoryData}  save="value"   />
+      </Box>
+
+      <Box>
+        <Text color="black" fontWeight="bold" marginBottom="xs">Unidade de Compra *</Text>
+        <SelectList onChangeText={setPurchaseUnity}  search={false}  placeholder='Selecione Unidade de compra' boxStyles={styles.textInput} inputStyles={{fontSize:12, marginLeft:-15}}   setSelected={(val) => setSelected(val)} data={UnidadeCompra}  save="value"   />
+      </Box>
+
+      <Box flexDirection='row' justifyContent='space-around' gap='s'>
+        <Box flex={1}>
+          <Text color="black" fontWeight="bold" marginBottom="xs">Quantidade de {selected}</Text>
+          <TextInput onChangeText={setProductQuantity} style={styles.textInput} keyboardType='numeric' ></TextInput>
+        </Box>
+        <Box flex={1}>
+          <Text color="black" fontWeight="bold" marginBottom="xs">Preço por {selected}</Text>
+          <TextInput onChangeText={setProductPrice} style={styles.textInput} keyboardType='numeric' ></TextInput>
+        </Box>
+      </Box>
+
+
+      <Box>
+        <Text color="black" fontWeight="bold" marginBottom="xs">Custo Total
+          <Text color='textDefaultColor' variant='textSmall'> (Se for diferente insira  valor correto)</Text>
+          </Text>
+          <Box flexDirection='row'>
+            <Box flex={1} justifyContent='center' alignItems='center'>
+              <Text  color="black" fontWeight="bold" marginBottom="xs">4.000 kz</Text>
+            </Box>
+            <Box flex={1}>
+              <TextInput onChangeText={setProductTotalCost} style={styles.textInput} keyboardType='numeric' ></TextInput>
+            </Box>
+          </Box>
+        </Box>
+
+      <Box>
+        <Text color="black" fontWeight="bold" marginBottom="xs">Venda por {selected} *</Text>
+        <SelectList onChangeText={setProductSellUnity}  search={false}  placeholder='Venda por' boxStyles={styles.textInput} inputStyles={{fontSize:12, marginLeft:-15}}   setSelected={(val) => setSelected(val)} data={UnidadeCompra}  save="value"   />
+      </Box>
+
+      <Box>
+        <Text color="black" fontWeight="bold" marginBottom="xs">Preço por {selected}</Text>
+        <TextInput onChangeText={setProductPrice} keyboardType='numeric' style={styles.textInput} placeholder="Preço de cada Item"></TextInput>
       </Box>
 
       <Box>
         <Text color="black" fontWeight="bold" marginBottom="xs">Data de expiração</Text>
-        {showPicker && (
-        <DateTimePicker
-          testID="dateTimePicker"
-          value={date}
-          mode={'date'}
-          is24Hour={true}
-          display="default"
-          onChange={onChange}
-        />
-      )}
-      {showPicker && Platform.OS === "ios" && (
-            <Box flexDirection='row' justifyContent='space-around'>
-              <TouchableOpacity onPress={toggleDatePicker} style={[ styles.button, styles.pickerButton, {backgroundColor: "#D4D6DD"}]}>
-                <Text>Cancel</Text>
-              </TouchableOpacity>
+        <Box >
+            <Box style={{position:"relative"}}>
 
-              <TouchableOpacity onPress={confirmIOSDate} style={[ styles.button, styles.pickerButton, {backgroundColor: "#D4D6DD"}]}>
-                <Text>Confirm</Text>
-              </TouchableOpacity>
-
-            </Box>
-      )}
-        {!showPicker && (
-        <Pressable onPress={toggleDatePicker}>
-            <TextInput 
-              style={styles.textInput} 
-              placeholder="dd/mm/YYYY" 
-              editable={false}
-              value={dateOfBirth}
-              onPressIn={toggleDatePicker}
+              {showPicker && (
+              <DateTimePicker
+                testID="dateTimePicker"
+                value={date}
+                mode={'date'}
+                is24Hour={true}
+                display="default"
+                onChange={onChange}
+                
               />
-        </Pressable>
-        )}
+              )}
+              {showPicker && Platform.OS === "ios" && (
+                  <Box flexDirection='row' justifyContent='space-around'>
+                    <TouchableOpacity onPress={toggleDatePicker} style={[ styles.button, styles.pickerButton, {backgroundColor: "#D4D6DD"}]}>
+                      <Text>Cancel</Text>
+                    </TouchableOpacity>
 
-    <Button  title="Reset Date" onPress={clearDate} /> 
+                    <TouchableOpacity onPress={confirmIOSDate} style={[ styles.button, styles.pickerButton, {backgroundColor: "#D4D6DD"}]}>
+                      <Text>Confirm</Text>
+                    </TouchableOpacity>
 
+                  </Box>
+              )}
+             
+              <Pressable onPress={toggleDatePicker}>
+                  <TextInput 
+                    style={styles.textInput} 
+                    placeholder="dd/mm/YYYY" 
+                    editable={false}
+                    value={expiryDate}
+                    onPressIn={toggleDatePicker}
+                    onChangeText={setExpiryDate}
+
+                    />
+              </Pressable>
+              
+     {expiryDate && ( // Conditionally render TouchableOpacity if expiry date has value"
+
+            <TouchableOpacity style={styles.clearDate} onPress={clearDate}>
+              <Box >
+              <AntDesign name="closecircleo" size={20} />
+              </Box>
+            </TouchableOpacity>
+             )}
+            </Box>
+        </Box>
       </Box>
+
+
 
       <Box>
-        <Text color="black" fontWeight="bold" marginBottom="xs">Quantidade*</Text>
-        <TextInput style={styles.textInput} placeholder="Quantidade"></TextInput>
+        <Text color="black" fontWeight="bold" marginBottom="xs">Imagem do produto</Text>
+        <TextInput  style={styles.textInput} placeholder="Preço de venda"></TextInput>
       </Box>
 
-      <Box>
-        <Text color="black" fontWeight="bold" marginBottom="xs">Preço de venda</Text>
-        <TextInput style={styles.textInput} placeholder="Preço de venda"></TextInput>
+      <Box flexDirection="row" gap="l">
+        <Button title="CANCELAR" />
+        <Button onPress={handleAddProduct} title="SALVAR" variant="buttonSuccess"
+        />
       </Box>
 
-      <Box>
-        <Text color="black" fontWeight="bold" marginBottom="xs">Preço de compra</Text>
-        <TextInput style={styles.textInput} ></TextInput>
-      </Box>
+
+      <Box  backgroundColor='blueLightest' borderRadius='s' padding='s' alignItems='flex-end' flex={1}>
+          <Text color="textDefaultColor" marginBottom="xs">Quantidade minima de venda para lucrar: <Text color="black" fontWeight='bold'>10</Text></Text>
+          <Text color="textDefaultColor"  marginBottom="xs">Previsão Pós-venda Total: <Text color="black" fontWeight='bold'>10</Text></Text>
+          <Text color="textDefaultColor"  marginBottom="xs">Previsão Pós-venda Lucro Total: <Text color="black" fontWeight='bold'>10</Text></Text>
+     </Box>
+
+
+
+     
+      
+
+
+
+
+
+
 
     </Box>
+    </ScrollView>
   );
 };
 
@@ -135,9 +250,20 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 6,
     padding: 6,
-    backgroundColor: '#F8F9FE',
+  //  backgroundColor: '#F8F9FE',
     fontSize: 12,
     color: '#000',
   },
+  clearDate: {
+    position: 'absolute', 
+    top: 10, 
+    right: 10,  
+   // justifyContent:'center',
+    alignItems:'center',
+  //  backgroundColor: '#000',
+    borderRadius:25,
+    zIndex:20,
+  },
+
   
 });

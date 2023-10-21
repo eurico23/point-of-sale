@@ -31,6 +31,7 @@ import ExpenseByCategory from '../pages/Expenses/ExpenseByCategory';
 import DevedoresList from '../pages/Devedores/DevedoresList';
 import LowStockProducts from '../pages/Products/LowStockProducts';
 import ExpiredProducts from '../pages/Products/ExpiredProducts';
+import ProductsCategory from '../pages/Products/ProductsCategory';
 
 
 const Stack = createStackNavigator();
@@ -67,7 +68,7 @@ const StackNavigator = () => {
             <Stack.Screen options={{ title: 'Devedores' }} name="DevedoresList" component={DevedoresList} />
             <Stack.Screen options={{ title: 'Produtos de estoque baixo' }} name="LowStockProducts" component={LowStockProducts} />
             <Stack.Screen options={{ title: 'Produtos Expirados' }} name="ExpiredProducts" component={ExpiredProducts} />
-
+            <Stack.Screen options={{ title: 'Categorias de Produtos' }} name="ProductsCategory" component={ProductsCategory} />
             
 
           </Stack.Navigator>

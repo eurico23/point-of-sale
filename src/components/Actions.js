@@ -119,8 +119,13 @@ export default function Actions() {
             <Text style={styles.labelButton}>Produtos Expirados</Text>
         </TouchableOpacity>
         
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('ProductsCategory')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Categoria de Produtos</Text>
+        </TouchableOpacity>
 
-
+        
       </View>
     </View>
 
