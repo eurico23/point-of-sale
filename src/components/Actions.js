@@ -125,7 +125,18 @@ export default function Actions() {
             <Text style={styles.labelButton}>Categoria de Produtos</Text>
         </TouchableOpacity>
 
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('NewCategory')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Nova Categoria</Text>
+        </TouchableOpacity>
         
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('AdjustStock')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Ajustar Estoque</Text>
+        </TouchableOpacity>
+
       </View>
     </View>
 

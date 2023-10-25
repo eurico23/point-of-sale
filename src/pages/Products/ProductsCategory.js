@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from "@react-navigation/native";
 import {Box, Text} from '../../styles/theme';
 import {View, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -10,9 +11,11 @@ import Calendar from '../../components/Calendar';
 
 
 const ProductsCategory = () => {
+  const navigation = useNavigation();
+
   return (
     <Box backgroundColor="mainBackground" flex={1} position='relative'>
-      <TouchableOpacity style={styles.print} onPress={() => navigation.navigate('ExpensesLandingPage')}>
+      <TouchableOpacity style={styles.print} onPress={() => navigation.navigate('NewCategory')}>
       <Box >
       <Feather name="plus" color="#fff" size={30} />
       </Box>

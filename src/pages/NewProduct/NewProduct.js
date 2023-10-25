@@ -8,6 +8,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Button from '../../components/Button';
 import { CategoryData } from '../../data/CategoryData';
 import { UnidadeCompra } from '../../data/UnidadeCompra';
+import { globalStyles } from '../../styles/stylesheet';
 
 
 
@@ -100,27 +101,27 @@ const NewProduct  = () => {
 
       <Box>
         <Text color="black" fontWeight="bold" marginBottom="xs">Nome do Produto *</Text>
-        <TextInput onChangeText={setProductName} style={styles.textInput} placeholder="Nome do Produto"></TextInput>
+        <TextInput onChangeText={setProductName} style={globalStyles.textInput} placeholder="Nome do Produto"></TextInput>
       </Box>
 
       <Box>
         <Text color="black" fontWeight="bold" marginBottom="xs">Categoria</Text>
-        <SelectList onChangeText={setProductCategory}  search={false}  placeholder='Selecione Categoria' boxStyles={styles.textInput} inputStyles={{fontSize:12, marginLeft:-15,}}  setSelected={(val) => setSelected(val)} data={CategoryData}  save="value"   />
+        <SelectList onChangeText={setProductCategory}  search={false}  placeholder='Selecione Categoria' boxStyles={globalStyles.textInput} inputStyles={{fontSize:12, marginLeft:-15,}}  setSelected={(val) => setSelected(val)} data={CategoryData}  save="value"   />
       </Box>
 
       <Box>
         <Text color="black" fontWeight="bold" marginBottom="xs">Unidade de Compra *</Text>
-        <SelectList onChangeText={setPurchaseUnity}  search={false}  placeholder='Selecione Unidade de compra' boxStyles={styles.textInput} inputStyles={{fontSize:12, marginLeft:-15}}   setSelected={(val) => setSelected(val)} data={UnidadeCompra}  save="value"   />
+        <SelectList onChangeText={setPurchaseUnity}  search={false}  placeholder='Selecione Unidade de compra' boxStyles={globalStyles.textInput} inputStyles={{fontSize:12, marginLeft:-15}}   setSelected={(val) => setSelected(val)} data={UnidadeCompra}  save="value"   />
       </Box>
 
       <Box flexDirection='row' justifyContent='space-around' gap='s'>
         <Box flex={1}>
           <Text color="black" fontWeight="bold" marginBottom="xs">Quantidade de {selected}</Text>
-          <TextInput onChangeText={setProductQuantity} style={styles.textInput} keyboardType='numeric' ></TextInput>
+          <TextInput onChangeText={setProductQuantity} style={globalStyles.textInput} keyboardType='numeric' ></TextInput>
         </Box>
         <Box flex={1}>
           <Text color="black" fontWeight="bold" marginBottom="xs">Preço por {selected}</Text>
-          <TextInput onChangeText={setProductPrice} style={styles.textInput} keyboardType='numeric' ></TextInput>
+          <TextInput onChangeText={setProductPrice} style={globalStyles.textInput} keyboardType='numeric' ></TextInput>
         </Box>
       </Box>
 
@@ -134,19 +135,19 @@ const NewProduct  = () => {
               <Text  color="black" fontWeight="bold" marginBottom="xs">4.000 kz</Text>
             </Box>
             <Box flex={1}>
-              <TextInput onChangeText={setProductTotalCost} style={styles.textInput} keyboardType='numeric' ></TextInput>
+              <TextInput onChangeText={setProductTotalCost} style={globalStyles.textInput} keyboardType='numeric' ></TextInput>
             </Box>
           </Box>
         </Box>
 
       <Box>
         <Text color="black" fontWeight="bold" marginBottom="xs">Venda por {selected} *</Text>
-        <SelectList onChangeText={setProductSellUnity}  search={false}  placeholder='Venda por' boxStyles={styles.textInput} inputStyles={{fontSize:12, marginLeft:-15}}   setSelected={(val) => setSelected(val)} data={UnidadeCompra}  save="value"   />
+        <SelectList onChangeText={setProductSellUnity}  search={false}  placeholder='Venda por' boxStyles={globalStyles.textInput} inputStyles={{fontSize:12, marginLeft:-15}}   setSelected={(val) => setSelected(val)} data={UnidadeCompra}  save="value"   />
       </Box>
 
       <Box>
         <Text color="black" fontWeight="bold" marginBottom="xs">Preço por {selected}</Text>
-        <TextInput onChangeText={setProductPrice} keyboardType='numeric' style={styles.textInput} placeholder="Preço de cada Item"></TextInput>
+        <TextInput onChangeText={setProductPrice} keyboardType='numeric' style={globalStyles.textInput} placeholder="Preço de cada Item"></TextInput>
       </Box>
 
       <Box>
@@ -180,7 +181,7 @@ const NewProduct  = () => {
              
               <Pressable onPress={toggleDatePicker}>
                   <TextInput 
-                    style={styles.textInput} 
+                    style={globalStyles.textInput} 
                     placeholder="dd/mm/YYYY" 
                     editable={false}
                     value={expiryDate}
@@ -206,7 +207,7 @@ const NewProduct  = () => {
 
       <Box>
         <Text color="black" fontWeight="bold" marginBottom="xs">Imagem do produto</Text>
-        <TextInput  style={styles.textInput} placeholder="Preço de venda"></TextInput>
+        <TextInput  style={globalStyles.textInput} placeholder="Preço de venda"></TextInput>
       </Box>
 
       <Box flexDirection="row" gap="l">
@@ -241,19 +242,6 @@ const NewProduct  = () => {
 export default NewProduct;
 
 const styles = StyleSheet.create({
-
-
-  textInput: {
-    marginBottom: 15,
-    width: '100%',
-    borderColor: '#D4D6DD',
-    borderWidth: 1,
-    borderRadius: 6,
-    padding: 6,
-  //  backgroundColor: '#F8F9FE',
-    fontSize: 12,
-    color: '#000',
-  },
   clearDate: {
     position: 'absolute', 
     top: 10, 
@@ -264,6 +252,4 @@ const styles = StyleSheet.create({
     borderRadius:25,
     zIndex:20,
   },
-
-  
 });
