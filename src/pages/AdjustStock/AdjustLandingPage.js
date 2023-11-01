@@ -10,7 +10,7 @@ const AdjustLandingPage = () => {
   return (
     <Box backgroundColor="mainBackground" flex={1} paddingHorizontal="s">
       <Box style={styles.gridContainer}>
-        <GridCard iconType="AntDesign" icon='CodeSandbox' link={'NewProduct'}  title='LISTAGEM AJUSTES' />
+        <GridCard iconType="AntDesign" icon='CodeSandbox' link={'AdjustStockList'}  title='LISTAGEM AJUSTES' />
         <GridCard iconType="FontAwesome6" icon='cubes' link='AdjustStock'  title='AJUSTAR ESTOQUE' />
       </Box>
     </Box>

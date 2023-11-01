@@ -35,6 +35,8 @@ import ProductsCategory from '../pages/Products/ProductsCategory';
 import NewCategory from '../pages/Products/NewCategory';
 import AdjustLandingPage from '../pages/AdjustStock/AdjustLandingPage';
 import AdjustStock from '../pages/AdjustStock/AdjustStock';
+import AdjustStockList from '../pages/AdjustStock/AdjustStockList';
+import AdjustByItem from '../pages/AdjustStock/AdjustByItem';
 
 
 const Stack = createStackNavigator();
@@ -75,6 +77,8 @@ const StackNavigator = () => {
             <Stack.Screen options={{ title: 'Nova Categoria' }} name="NewCategory" component={NewCategory} />
             <Stack.Screen options={{ title: 'Ajustes de Estoque' }} name="AdjustLandingPage" component={AdjustLandingPage} />
             <Stack.Screen options={{ title: 'Ajustar Estoque' }} name="AdjustStock" component={AdjustStock} />
+            <Stack.Screen options={{ title: 'Listagem de Ajustes' }} name="AdjustStockList" component={AdjustStockList} />
+            <Stack.Screen options={{ title: 'Ajustes por Item' }} name="AdjustByItem" component={AdjustByItem} />
 
             
 
