@@ -21,13 +21,15 @@ import SalesHistory from '../pages/SalesHistory/SalesHistory';
 import ProductsLandingPage from '../pages/Products/ProductsLandingPage';
 import SalesLandingPage from '../pages/SalesLandingPage/SalesLandingPage';
 import ExpensesLandingPage from '../pages/Expenses/ExpensesLandingPage';
+import ExpensesList from '../pages/Expenses/ExpensesList';
+import EditExpenses from '../pages/Expenses/EditExpenses';
+import AddExpenses from '../pages/Expenses/AddExpenses';
+import ExpenseByCategory from '../pages/Expenses/ExpenseByCategory';
+import Category from '../pages/Expenses/Category';
 import DevedoresLandingPage from '../pages/Devedores/DevedoresList';
 import NewProduct from '../pages/NewProduct/NewProduct';
 import BalanceSalesExpenses from '../pages/BalanceSalesExpenses/BalanceSalesExpenses';
 import BalanceLandingPage from '../pages/BalanceLandingPage/BalanceLandingPage';
-import ExpensesList from '../pages/Expenses/ExpensesList';
-import Category from '../pages/Expenses/Category';
-import ExpenseByCategory from '../pages/Expenses/ExpenseByCategory';
 import DevedoresList from '../pages/Devedores/DevedoresList';
 import LowStockProducts from '../pages/Products/LowStockProducts';
 import ExpiredProducts from '../pages/Products/ExpiredProducts';
@@ -37,6 +39,8 @@ import AdjustLandingPage from '../pages/AdjustStock/AdjustLandingPage';
 import AdjustStock from '../pages/AdjustStock/AdjustStock';
 import AdjustStockList from '../pages/AdjustStock/AdjustStockList';
 import AdjustByItem from '../pages/AdjustStock/AdjustByItem';
+import EditCategory from '../pages/Products/EditCategory';
+import EditProduct from '../pages/Products/EditProduct';
 
 
 const Stack = createStackNavigator();
@@ -62,12 +66,15 @@ const StackNavigator = () => {
             <Stack.Screen options={{ title: 'Vendas Realizadas' }} name="SalesHistory" component={SalesHistory} />
             <Stack.Screen options={{ title: 'Gestão de produtos' }} name="ProductsLandingPage" component={ProductsLandingPage} />
             <Stack.Screen options={{ title: 'Gestão de Vendas' }} name="SalesLandingPage" component={SalesLandingPage} />
-            <Stack.Screen options={{ title: 'Despesas' }} name="ExpensesLandingPage" component={ExpensesLandingPage} />
             <Stack.Screen options={{ title: 'Devedores' }} name="DevedoresLandingPage" component={DevedoresLandingPage} />
             <Stack.Screen options={{ title: 'Novo Produto' }} name="NewProduct" component={NewProduct} />
+            <Stack.Screen options={{ title: 'Editar Producto' }} name="EditProduct" component={EditProduct} />    
+            <Stack.Screen options={{ title: 'Despesas' }} name="ExpensesLandingPage" component={ExpensesLandingPage} />        
             <Stack.Screen options={{ title: 'BalanceSalesExpenses' }} name="BalanceSalesExpenses" component={BalanceSalesExpenses} />
-            <Stack.Screen options={{ title: 'BalanceLandingPage' }} name="BalanceLandingPage" component={BalanceLandingPage} />
             <Stack.Screen options={{ title: 'Lista das Despesas' }} name="ExpensesList" component={ExpensesList} />
+            <Stack.Screen options={{ title: 'Editar Despesa' }} name="EditExpenses" component={EditExpenses} /> 
+            <Stack.Screen options={{ title: 'Adicionar Despesa' }} name="AddExpenses" component={AddExpenses} /> 
+            <Stack.Screen options={{ title: 'BalanceLandingPage' }} name="BalanceLandingPage" component={BalanceLandingPage} />
             <Stack.Screen options={{ title: 'Categorias' }} name="Category" component={Category} />
             <Stack.Screen options={{ title: 'Despesas por Categoria' }} name="ExpenseByCategory" component={ExpenseByCategory} />
             <Stack.Screen options={{ title: 'Devedores' }} name="DevedoresList" component={DevedoresList} />
@@ -75,6 +82,7 @@ const StackNavigator = () => {
             <Stack.Screen options={{ title: 'Produtos Expirados' }} name="ExpiredProducts" component={ExpiredProducts} />
             <Stack.Screen options={{ title: 'Categorias de Produtos' }} name="ProductsCategory" component={ProductsCategory} />
             <Stack.Screen options={{ title: 'Nova Categoria' }} name="NewCategory" component={NewCategory} />
+            <Stack.Screen options={{ title: 'Editar Categoria' }} name="EditCategory" component={EditCategory} />
             <Stack.Screen options={{ title: 'Ajustes de Estoque' }} name="AdjustLandingPage" component={AdjustLandingPage} />
             <Stack.Screen options={{ title: 'Ajustar Estoque' }} name="AdjustStock" component={AdjustStock} />
             <Stack.Screen options={{ title: 'Listagem de Ajustes' }} name="AdjustStockList" component={AdjustStockList} />

@@ -79,7 +79,7 @@ const ListOfProducts = () => {
                    title="APAGAR"
                    variant="buttonWarning"
                  />      
-                 <Button title="EDITAR" variant="defaults" />
+                 <Button title="EDITAR" variant="defaults" onPress={() => navigation.navigate('EditProduct')} />
                </Box>
               )}
             </Card>

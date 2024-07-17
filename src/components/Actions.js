@@ -85,8 +85,19 @@ export default function Actions() {
             <Text style={styles.labelButton}>Listar despesas</Text>
         </TouchableOpacity>
 
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('AddExpenses')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Adicionar despesa</Text>
+        </TouchableOpacity>
 
-
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('EditExpenses')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Editar despesa</Text>
+        </TouchableOpacity>
+        
+        
 
         <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('Category')}> 
           <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
@@ -130,6 +141,14 @@ export default function Actions() {
             </View>
             <Text style={styles.labelButton}>Nova Categoria</Text>
         </TouchableOpacity>
+
+
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('EditCategory')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Editar Categoria</Text>
+        </TouchableOpacity>
+        
         
         <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('AdjustStock')}> 
           <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
@@ -148,6 +167,13 @@ export default function Actions() {
             </View>
             <Text style={styles.labelButton}>Ajuste estoque por Item</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('EditProduct')}> 
+          <View style={[styles.areaButton, style={backgroundColor: '#A4437D'}]}>
+            </View>
+            <Text style={styles.labelButton}>Editar Produto</Text>
+        </TouchableOpacity>
+        
 
       </View>
     </View>
@@ -209,6 +235,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom:30,
     color:'#71727A',
-    
   }
 });

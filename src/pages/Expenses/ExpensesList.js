@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Box, Text} from '../../styles/theme';
 import { FlatList, StyleSheet, TouchableOpacity} from 'react-native';
 import { useNavigation } from "@react-navigation/native";
@@ -7,8 +7,11 @@ import Balance from '../../components/Balance';
 import Card from '../../components/Card';
 import { SalesHistoryData } from '../../data/SalesHistoryData';
 import Calendar from '../../components/Calendar';
+import Button from '../../components/Button';
+
 
 const ExpensesList = () => {
+  const [openItem, setOpenItem] = useState(null); // State to track open items
   const navigation = useNavigation();
   return (
     <Box backgroundColor="mainBackground" flex={1} position='relative'>
@@ -22,9 +25,10 @@ const ExpensesList = () => {
         data={SalesHistoryData}
         keyExtractor={item => item.id}
         renderItem={({item}) => {
-
+          const isItemOpen = openItem === item.id; // Check if this item is open
           return (
           <Card>
+            <TouchableOpacity onPress={() => setOpenItem(isItemOpen ? null : item.id)}>
             <Box>
                 <Box>
                   <Text color="highlight" fontWeight='bold'>Pagamento de casa</Text>
@@ -44,6 +48,16 @@ const ExpensesList = () => {
                 </Box>
 
             </Box>
+            </TouchableOpacity>
+            {isItemOpen && (
+                 <Box flexDirection="row" gap="m" marginTop='m'>
+                 <Button
+                   title="APAGAR"
+                   variant="buttonWarning"
+                 />      
+                 <Button title="EDITAR" variant="defaults" onPress={() => navigation.navigate('EditExpenses')} />
+               </Box>
+              )}
           </Card>
           );
         }}
